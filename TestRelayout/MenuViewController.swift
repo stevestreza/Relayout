@@ -47,37 +47,39 @@ final class MenuViewController: UIViewController {
         cancelButton = button(title: "Cancel")
         view.addSubview(cancelButton)
 
-        layout = Layout { [weak self] view -> [NSLayoutConstraint] in
-            guard let strongSelf = self else { return [] }
-            let cancelButton = strongSelf.cancelButton!
-            let view = strongSelf.view!
-
-            var cancelButtonConstraints: [NSLayoutConstraint] = [
+        layout = ViewLayout(rootView: view, layouts: [
+            Layout(constraints: [
                 cancelButton.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor, constant: 10),
                 cancelButton.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor, constant: -10)
-            ]
+            ]),
+            Layout { [weak self] view -> [NSLayoutConstraint] in
+                guard let strongSelf = self else { return [] }
+                let cancelButton = strongSelf.cancelButton!
 
-            let buttonConstraints = strongSelf.allButtons.reverse().pairs.flatMap({ (buttons: (UIButton, UIButton)) -> [NSLayoutConstraint] in
-                let (previous, button) = buttons
-                let offset: CGFloat = (previous == cancelButton) ? -20 : -4
-                return [
-                    button.leadingAnchor.constraintEqualToAnchor(previous.leadingAnchor),
-                    button.trailingAnchor.constraintEqualToAnchor(previous.trailingAnchor),
-                    button.bottomAnchor.constraintEqualToAnchor(previous.topAnchor, constant: offset)
-                ]
-            })
+                let buttonConstraints = strongSelf.allButtons.reverse().pairs.flatMap({ (buttons: (UIButton, UIButton)) -> [NSLayoutConstraint] in
+                    let (previous, button) = buttons
+                    let offset: CGFloat = (previous == cancelButton) ? -20 : -4
+                    return [
+                        button.leadingAnchor.constraintEqualToAnchor(previous.leadingAnchor),
+                        button.trailingAnchor.constraintEqualToAnchor(previous.trailingAnchor),
+                        button.bottomAnchor.constraintEqualToAnchor(previous.topAnchor, constant: offset)
+                    ]
+                })
 
-            let pinningConstraint: NSLayoutConstraint
-            if strongSelf.menuVisible {
-                pinningConstraint = cancelButton.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: 0 - strongSelf.bottomLayoutGuide.length - 10)
-            }
-            else {
-                pinningConstraint = strongSelf.firstButton.topAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: 10)
-            }
-            cancelButtonConstraints.append(pinningConstraint)
-            
-            return [cancelButtonConstraints, buttonConstraints].flatMap { $0 }
-        }.viewLayout(withRootView: self.view)
+                return buttonConstraints
+            },
+            ConditionalLayout(
+                condition: { [weak self] in self?.menuVisible ?? false},
+                layout: Layout { [weak self] _ in
+                    guard let strongSelf = self else { return [] }
+                    return [strongSelf.cancelButton.bottomAnchor.constraintEqualToAnchor(strongSelf.view.bottomAnchor, constant: 0 - strongSelf.bottomLayoutGuide.length - 10)]
+                },
+                elseLayout: Layout { [weak self] _ in
+                    guard let strongSelf = self else { return [] }
+                    return [strongSelf.firstButton.topAnchor.constraintEqualToAnchor(strongSelf.view.bottomAnchor, constant: 10)]
+                }
+            )
+        ])
 
 
         layout.layout()

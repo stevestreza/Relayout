@@ -7,6 +7,10 @@ public struct Layout: LayingOut {
         self.handler = handler
     }
 
+    public init(constraints: [NSLayoutConstraint]) {
+        self.handler = { _ in constraints }
+    }
+
     public func constraints(in view: UIView) -> [NSLayoutConstraint] {
         return handler(view)
     }

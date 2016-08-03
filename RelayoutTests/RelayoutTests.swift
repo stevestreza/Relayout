@@ -53,4 +53,23 @@ class RelayoutTests: XCTestCase {
         identifiedLayout.layout()
         view.constraints.forEach { XCTAssertEqual($0.identifier, "Test") }
     }
+
+    func testConditionalLayout() {
+        let (view, subview, layout) = newLayout()
+
+        var test: Bool = false
+        let identifiedLayout = ViewLayout(rootView: view, layout: layout.when({ test }))
+        XCTAssertEqual(view.constraints.count, 0)
+
+        identifiedLayout.layout()
+        XCTAssertEqual(view.constraints.count, 0)
+
+        test = true
+        identifiedLayout.layout()
+        XCTAssertNotEqual(view.constraints.count, 0)
+        XCTAssertEqual(subview.frame.width, 40)
+        XCTAssertEqual(subview.frame.height, 40)
+        XCTAssertEqual(subview.frame.minX, 20)
+        XCTAssertEqual(subview.frame.minY, 20)
+    }
 }
