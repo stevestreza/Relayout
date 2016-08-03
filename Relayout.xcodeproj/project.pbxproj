@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70D4A501D51D29E00DD71AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */; };
+		A70D4A591D51D29E00DD71AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A581D51D29E00DD71AE /* Assets.xcassets */; };
+		A70D4A5C1D51D29E00DD71AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */; };
+		A70D4A631D51D2FA00DD71AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A611D51D2FA00DD71AE /* MenuViewController.swift */; };
+		A70D4A641D51D2FA00DD71AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A621D51D2FA00DD71AE /* ViewController.swift */; };
+		A70D4A671D51D34E00DD71AE /* Relayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EC54E21D51B15200A579B9 /* Relayout.framework */; };
+		A70D4A6A1D51D39500DD71AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A681D51D39500DD71AE /* Main.storyboard */; };
 		A7EC54E61D51B15200A579B9 /* Relayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EC54E51D51B15200A579B9 /* Relayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7EC54ED1D51B15300A579B9 /* Relayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EC54E21D51B15200A579B9 /* Relayout.framework */; };
 		A7EC54F21D51B15300A579B9 /* RelayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A70D4A651D51D34A00DD71AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7EC54D91D51B15200A579B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7EC54E11D51B15200A579B9;
+			remoteInfo = Relayout;
+		};
 		A7EC54EE1D51B15300A579B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7EC54D91D51B15200A579B9 /* Project object */;
@@ -27,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70D4A4D1D51D29E00DD71AE /* TestRelayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRelayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A70D4A581D51D29E00DD71AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A70D4A5B1D51D29E00DD71AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A70D4A5D1D51D29E00DD71AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70D4A611D51D2FA00DD71AE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A70D4A621D51D2FA00DD71AE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A70D4A691D51D39500DD71AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7EC54E21D51B15200A579B9 /* Relayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54E51D51B15200A579B9 /* Relayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relayout.h; sourceTree = "<group>"; };
 		A7EC54E71D51B15300A579B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +62,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A70D4A4A1D51D29E00DD71AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70D4A671D51D34E00DD71AE /* Relayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7EC54DE1D51B15200A579B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,11 +88,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A70D4A4E1D51D29E00DD71AE /* TestRelayout */ = {
+			isa = PBXGroup;
+			children = (
+				A70D4A611D51D2FA00DD71AE /* MenuViewController.swift */,
+				A70D4A621D51D2FA00DD71AE /* ViewController.swift */,
+				A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */,
+				A70D4A681D51D39500DD71AE /* Main.storyboard */,
+				A70D4A581D51D29E00DD71AE /* Assets.xcassets */,
+				A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */,
+				A70D4A5D1D51D29E00DD71AE /* Info.plist */,
+			);
+			path = TestRelayout;
+			sourceTree = "<group>";
+		};
 		A7EC54D81D51B15200A579B9 = {
 			isa = PBXGroup;
 			children = (
 				A7EC54E41D51B15200A579B9 /* Framework */,
 				A7EC54F01D51B15300A579B9 /* RelayoutTests */,
+				A70D4A4E1D51D29E00DD71AE /* TestRelayout */,
 				A7EC54E31D51B15200A579B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +117,7 @@
 			children = (
 				A7EC54E21D51B15200A579B9 /* Relayout.framework */,
 				A7EC54EC1D51B15300A579B9 /* RelayoutTests.xctest */,
+				A70D4A4D1D51D29E00DD71AE /* TestRelayout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +174,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A70D4A4C1D51D29E00DD71AE /* TestRelayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "TestRelayout" */;
+			buildPhases = (
+				A70D4A491D51D29E00DD71AE /* Sources */,
+				A70D4A4A1D51D29E00DD71AE /* Frameworks */,
+				A70D4A4B1D51D29E00DD71AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A70D4A661D51D34A00DD71AE /* PBXTargetDependency */,
+			);
+			name = TestRelayout;
+			productName = TestRelayout;
+			productReference = A70D4A4D1D51D29E00DD71AE /* TestRelayout.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A7EC54E11D51B15200A579B9 /* Relayout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7EC54F61D51B15300A579B9 /* Build configuration list for PBXNativeTarget "Relayout" */;
@@ -174,6 +238,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Steve Streza";
 				TargetAttributes = {
+					A70D4A4C1D51D29E00DD71AE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					A7EC54E11D51B15200A579B9 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -188,6 +255,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A7EC54D81D51B15200A579B9;
 			productRefGroup = A7EC54E31D51B15200A579B9 /* Products */;
@@ -196,11 +264,22 @@
 			targets = (
 				A7EC54E11D51B15200A579B9 /* Relayout */,
 				A7EC54EB1D51B15300A579B9 /* RelayoutTests */,
+				A70D4A4C1D51D29E00DD71AE /* TestRelayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A70D4A4B1D51D29E00DD71AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70D4A6A1D51D39500DD71AE /* Main.storyboard in Resources */,
+				A70D4A5C1D51D29E00DD71AE /* LaunchScreen.storyboard in Resources */,
+				A70D4A591D51D29E00DD71AE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7EC54E01D51B15200A579B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +297,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A70D4A491D51D29E00DD71AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70D4A641D51D2FA00DD71AE /* ViewController.swift in Sources */,
+				A70D4A501D51D29E00DD71AE /* AppDelegate.swift in Sources */,
+				A70D4A631D51D2FA00DD71AE /* MenuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7EC54DD1D51B15200A579B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +329,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A70D4A661D51D34A00DD71AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7EC54E11D51B15200A579B9 /* Relayout */;
+			targetProxy = A70D4A651D51D34A00DD71AE /* PBXContainerItemProxy */;
+		};
 		A7EC54EF1D51B15300A579B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7EC54E11D51B15200A579B9 /* Relayout */;
@@ -247,7 +341,48 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70D4A5B1D51D29E00DD71AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A70D4A681D51D39500DD71AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70D4A691D51D39500DD71AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		A70D4A5E1D51D29E00DD71AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TestRelayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A70D4A5F1D51D29E00DD71AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TestRelayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A7EC54F41D51B15300A579B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -397,6 +532,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "TestRelayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70D4A5E1D51D29E00DD71AE /* Debug */,
+				A70D4A5F1D51D29E00DD71AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A7EC54DC1D51B15200A579B9 /* Build configuration list for PBXProject "Relayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -413,6 +556,7 @@
 				A7EC54F81D51B15300A579B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7EC54F91D51B15300A579B9 /* Build configuration list for PBXNativeTarget "RelayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +565,7 @@
 				A7EC54FB1D51B15300A579B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

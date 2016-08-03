@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
 
-protocol LayingOut {
+public protocol LayingOut {
     func constraints(in in: UIView) -> [NSLayoutConstraint]
 }
