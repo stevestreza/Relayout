@@ -40,6 +40,9 @@ There are a number of implementations of the `LayingOut`:code: protocol, either 
 
 - `Layout`:code:, which generates constraints from a closure
 - `IdentifyingLayout`:code:, which adds an identifier to all `NSLayoutConstraint`:code: objects for a given `LayingOut`:code: object
+
+Coming soon: 
+
 - `ConditionalLayout`:code:, which returns the `NSLayoutConstraint`:code: objects from a given `LayingOut`:code: object iff the condition is true
 - `TraitCollectionLayout`:code:, which returns the `NSLayoutConstraint`:code: objects from a given `LayingOut`:code: object iff the root view has certain `UITraitCollection`:code: traits
 
