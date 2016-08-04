@@ -16,13 +16,19 @@ public class ViewLayout {
 
     private(set) var activeConstraints: [NSLayoutConstraint] = []
 
+    private var isLayingOut = false
     public func layout() {
+        guard isLayingOut == false else { return }
+        isLayingOut = true
+
         NSLayoutConstraint.deactivateConstraints(activeConstraints)
         activeConstraints = layouts.flatMap { $0.constraints(in: self.rootView) }
         NSLayoutConstraint.activateConstraints(activeConstraints)
 
         rootView.setNeedsLayout()
         rootView.layoutIfNeeded()
+
+        isLayingOut = false
     }
 }
 

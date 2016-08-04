@@ -45,31 +45,60 @@ final class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         cancelButton = button(title: "Cancel")
+        cancelButton.layer.zPosition = 200
+        cancelButton.layoutSubviews()
         view.addSubview(cancelButton)
 
         layout = ViewLayout(rootView: view, layouts: [
-            Layout(constraints: [
-                cancelButton.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor, constant: 10),
-                cancelButton.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor, constant: -10)
-            ]),
-            Layout { [weak self] view -> [NSLayoutConstraint] in
-                guard let strongSelf = self else { return [] }
-                let cancelButton = strongSelf.cancelButton!
-
-                let buttonConstraints = strongSelf.allButtons.reverse().pairs.flatMap({ (buttons: (UIButton, UIButton)) -> [NSLayoutConstraint] in
-                    let (previous, button) = buttons
-                    let offset: CGFloat = (previous == cancelButton) ? -20 : -4
-                    return [
-                        button.leadingAnchor.constraintEqualToAnchor(previous.leadingAnchor),
-                        button.trailingAnchor.constraintEqualToAnchor(previous.trailingAnchor),
-                        button.bottomAnchor.constraintEqualToAnchor(previous.topAnchor, constant: offset)
-                    ]
-                })
-
-                return buttonConstraints
-            },
+            // Horizontal layout or vertical?
             ConditionalLayout(
-                condition: { [weak self] in self?.menuVisible ?? false},
+                condition: { view in self.buttons.count < 6 && view.traitCollection.horizontalSizeClass == .Regular },
+                // Horizontal
+                layout: LayoutGroup(layouts: [
+                    // Constrain each button horizontally by making the top/bottom/width equal to the next button
+                    ListLayout(
+                        items: { _ in self.buttons },
+                        iterator: { (view, button, _, previous, next) -> [NSLayoutConstraint] in
+                            guard let next = next ?? self.cancelButton else { return [] }
+                            return [
+                                button.topAnchor.constraintEqualToAnchor(next.topAnchor),
+                                button.bottomAnchor.constraintEqualToAnchor(next.bottomAnchor),
+                                (next == self.cancelButton ? nil : button.widthAnchor.constraintEqualToAnchor(next.widthAnchor, multiplier: 1)),
+                                button.trailingAnchor.constraintEqualToAnchor(next.leadingAnchor, constant: (next == self.cancelButton ? -20 : -4))
+                            ]
+                            .flatMap { $0 }
+                        }
+                    ),
+                    // Constrain the first and
+                    Layout { view -> [NSLayoutConstraint] in
+                        guard let firstButton = self.buttons.first ?? self.cancelButton else { return [] }
+                        return [
+                            firstButton.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor, constant: 10),
+                            self.cancelButton.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor, constant: -10)
+                        ]
+                    }
+                ]),
+                // Vertical
+                elseLayout: LayoutGroup(layouts: [
+                    ListLayout(
+                        items: { [weak self] _ in self?.buttons.reverse() ?? [] },
+                        iterator: { (view, button, _, prev, _) -> [NSLayoutConstraint] in
+                            guard let previous = (prev ?? self.cancelButton) else { return [] }
+                            return [
+                                button.leadingAnchor.constraintEqualToAnchor(previous.leadingAnchor),
+                                button.trailingAnchor.constraintEqualToAnchor(previous.trailingAnchor),
+                                button.bottomAnchor.constraintEqualToAnchor(previous.topAnchor, constant: (prev == nil ? -20 : -4))
+                            ]
+                        }
+                    ),
+                    Layout(constraints: [
+                        cancelButton.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor, constant: 10),
+                        cancelButton.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor, constant: -10)
+                    ]),
+                ])
+            ),
+            ConditionalLayout(
+                condition: { [weak self] _ in self?.menuVisible ?? false},
                 layout: Layout { [weak self] _ in
                     guard let strongSelf = self else { return [] }
                     return [strongSelf.cancelButton.bottomAnchor.constraintEqualToAnchor(strongSelf.view.bottomAnchor, constant: 0 - strongSelf.bottomLayoutGuide.length - 10)]
@@ -89,9 +118,13 @@ final class MenuViewController: UIViewController {
         let button = UIButton(type: UIButtonType.RoundedRect)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(title, forState: .Normal)
+        button.titleLabel?.font = UIFont.systemFontOfSize(17)
         button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         button.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         button.layer.cornerRadius = 10
+        button.layer.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.2).CGColor
+        button.layer.borderWidth = 1
+        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
         return button
     }
 
@@ -101,19 +134,27 @@ final class MenuViewController: UIViewController {
     var menuVisible: Bool = false
     @IBAction func toggleMenuVisible() {
         menuVisible = !menuVisible
-        layoutMenu()
+        layoutMenu(animated: true)
     }
 
     @IBAction func add() {
         let newButton = button(title: "Button \(buttons.count + 1)")
         newButton.frame = (buttons.last ?? cancelButton)!.frame
+        newButton.layer.zPosition = CGFloat(100 - buttons.count)
+        newButton.layoutSubviews()
+
         view.addSubview(newButton)
         buttons.append(newButton)
 
-        layoutMenu()
+        layoutMenu(animated: true)
     }
 
-    func layoutMenu() {
-        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: UIViewAnimationOptions(), animations: layout.layout, completion: nil)
+    func layoutMenu(animated animated: Bool) {
+        UIView.animateWithDuration(animated ? 0.5 : 0, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: UIViewAnimationOptions(), animations: layout.layout, completion: nil)
+    }
+
+    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        layout?.layout()
     }
 }
