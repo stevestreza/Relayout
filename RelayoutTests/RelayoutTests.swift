@@ -58,7 +58,7 @@ class RelayoutTests: XCTestCase {
         let (view, subview, layout) = newLayout()
 
         var test: Bool = false
-        let identifiedLayout = ViewLayout(rootView: view, layout: layout.when({ test }))
+        let identifiedLayout = ViewLayout(rootView: view, layout: layout.when({ _ in test }))
         XCTAssertEqual(view.constraints.count, 0)
 
         identifiedLayout.layout()
