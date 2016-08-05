@@ -13,20 +13,23 @@ public struct ConditionalLayout: LayingOut {
         self.elseLayout = elseLayout
     }
 
-    public init(condition: (UIView) -> Bool, handler: (UIView) -> [NSLayoutConstraint], elseHandler: ((UIView) -> [NSLayoutConstraint])? = nil) {
-        self.init(condition: condition, layout: Layout(handler: handler), elseLayout: elseHandler.flatMap { Layout(handler: $0) })
-    }
-
     public init(condition: (UIView) -> Bool, handler: (UIView) -> [NSLayoutConstraint]) {
-        self.init(condition: condition, layout: Layout(handler: handler))
+        self.init(condition: condition, layout: Layout(handler: handler), elseLayout: nil)
     }
 
-    public init(condition: (UIView) -> Bool, constraints: [NSLayoutConstraint], elseConstraints: [NSLayoutConstraint]? = nil) {
+    public init(condition: (UIView) -> Bool, handler: (UIView) -> [NSLayoutConstraint], elseHandler: ((UIView) -> [NSLayoutConstraint])) {
+        self.init(condition: condition, layout: Layout(handler: handler), elseLayout: Layout(handler: elseHandler))
+    }
+
+    public init(condition: (UIView) -> Bool, constraints: [NSLayoutConstraint]) {
         NSLayoutConstraint.deactivateConstraints(constraints)
-        if let elseConstraints = elseConstraints {
-            NSLayoutConstraint.deactivateConstraints(elseConstraints)
-        }
-        self.init(condition: condition, layout: Layout(constraints: constraints), elseLayout: elseConstraints.flatMap { Layout(constraints: $0) })
+        self.init(condition: condition, layout: Layout(constraints: constraints), elseLayout: nil)
+    }
+
+    public init(condition: (UIView) -> Bool, constraints: [NSLayoutConstraint], elseConstraints: [NSLayoutConstraint]) {
+        NSLayoutConstraint.deactivateConstraints(constraints)
+        NSLayoutConstraint.deactivateConstraints(elseConstraints)
+        self.init(condition: condition, layout: Layout(constraints: constraints), elseLayout: Layout(constraints: elseConstraints) )
     }
 
     public func constraints(in view: UIView) -> [NSLayoutConstraint] {
