@@ -1,6 +1,8 @@
 Relayout
 ========
 
+.. image:: https://travis-ci.org/stevestreza/Relayout.svg
+
 Relayout is a Swift microframework to make using Auto Layout easier with static and dynamic layouts.
 
 Why?
