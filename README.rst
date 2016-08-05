@@ -41,7 +41,7 @@ There are a number of implementations of the `LayingOut`:code: protocol, either 
 - `Layout`:code:, which generates constraints from a closure
 - `LayoutGroup`:code:, which just returns all of the `NSLayoutConstraint`:code: objects provided by an `Array`:code: of `LayingOut`:code: objects
 - `IdentifyingLayout`:code:, which adds an identifier to all `NSLayoutConstraint`:code: objects for a given `LayingOut`:code: object (which is useful for debugging unsatisfiable constraint errors)
-- `ConditionalLayout`:code:, which returns the `NSLayoutConstraint`:code: objects from a given `LayingOut`:code: object iff the condition is true, and optionally return other `NSLayoutConstraint`:code: objects if the condition is false
+- `ConditionalLayout`:code:, which returns the `NSLayoutConstraint`:code: objects from a given `LayingOut`:code: object if the condition is true, and optionally return other `NSLayoutConstraint`:code: objects if the condition is false
 - `TraitCollectionLayout`:code:, which returns the `NSLayoutConstraint`:code: objects from a given `LayingOut`:code: object iff the root view has certain `UITraitCollection`:code: traits
 - `ListLayout`:code:, which iterates over a list of objects, calling a closure that returns `NSLayoutConstraint`:code: objects when passed the object, its index, and the previous and next objects in the list (to easily constrain between an object and its next and previous views).
 
