@@ -33,15 +33,25 @@ Relayout is also not the definitive implementation of a functional layout. It's 
 
 Finally, Relayout is not a great tool to use in conjunction with Interface Builder. Both Interface Builder and Relayout want you to supply a complete set of constraints to fully describe a UI. Trying to get those two to play nicely is a fight neither you nor I want to solve.
 
-How to Use
+Installing
 ==========
 
-At the heart of Relayout is the `LayingOut`:code: protocol which generates a list of `NSLayoutConstraint`:code: objects. To use this, the `Layout`:code: object will let you specify a closure to generate your constraints. Once you have one or more `LayingOut`:code: objects, you can build a `ViewLayout`:code: object, which is going to do the heavy lifting of managing the constraints to keep and activating and deactivating them as needed. Then, whenever you need to update your UI, you call `viewLayout.layout()`:code:, and it will update your UI for you (and you can even do this in an animation block).
+You will eventually be able to install this with CocoaPods and Carthage.
 
-There are a number of implementations of the `LayingOut`:code: protocol, either existing or planned. So far you can use:
+You should probably not use it yet.
 
-- `Layout`:code:, which generates constraints from a closure
-- `LayoutGroup`:code:, which just returns all of the `NSLayoutConstraint`:code: objects provided by an `Array`:code: of `LayingOut`:code: objects
+Usage
+=====
+
+You can use Relayout from within both views and view controllers. To take advantage of it, you will need a `ViewLayout`:code: object. Create one with a root view (such as the view controller's view, the table cell's content view, or the view itself). You will also need to give it an object that conforms to the `LayingOut`:code: protocol. This protocol is very simple and has one method which takes your root view and returns an `Array<NSLayoutConstraint>`:code:, which represents the list of constraints that you want applied.
+
+Once you have a `ViewLayout`:code: object, you'll want to call its `layout()`:code: method anywhere that might trigger a layout. Places where that may happen include `updateConstraints`:code:, `setFrame`:code:, `traitCollectionDidChange`:code:, and any place where your UI's state changes.
+
+The simplest way to return constraints is to use the `Layout`:code: object, which accepts either an `Array<NSLayoutConstraint>`:code: to pass through directly, or a closure that takes your root view and returns the `Array<NSLayoutConstraint>`:code: to apply to it.
+
+Relayout was designed to be composable, meaning that the `Layout`:code: object is one building block to use to build powerful and flexible layouts. There are a number of implementations of the `LayingOut`:code: protocol, either existing or planned. So far you can use:
+
+- `LayoutGroup`:code:, which returns all of the `NSLayoutConstraint`:code: objects provided by an `Array<LayingOut>`:code: object
 - `IdentifyingLayout`:code:, which adds an identifier to all `NSLayoutConstraint`:code: objects for a given `LayingOut`:code: object (which is useful for debugging unsatisfiable constraint errors)
 - `ConditionalLayout`:code:, which returns the `NSLayoutConstraint`:code: objects from a given `LayingOut`:code: object if the condition is true, and optionally return other `NSLayoutConstraint`:code: objects if the condition is false
 - `TraitCollectionLayout`:code:, which returns the `NSLayoutConstraint`:code: objects from a given `LayingOut`:code: object iff the root view has certain `UITraitCollection`:code: traits
@@ -49,7 +59,3 @@ There are a number of implementations of the `LayingOut`:code: protocol, either 
 
 And you can of course implement the `LayingOut`:code: protocol if you see fit. It has no `Self`:code: requirement, so you can use them interchangeably anywhere.
 
-Installing
-==========
-
-You will eventually be able to install this with CocoaPods and Carthage.
