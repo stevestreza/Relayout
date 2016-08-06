@@ -45,8 +45,9 @@ final class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         cancelButton = button(title: "Cancel")
-        cancelButton.layer.zPosition = 200
+        cancelButton.layer.zPosition = 2000
         cancelButton.layoutSubviews()
+        cancelButton.addTarget(self, action: #selector(MenuViewController.toggleMenuVisible), forControlEvents: .TouchUpInside)
         view.addSubview(cancelButton)
 
         layout = ViewLayout(rootView: view, layouts: [
@@ -137,16 +138,30 @@ final class MenuViewController: UIViewController {
         layoutMenu(animated: true)
     }
 
-    @IBAction func add() {
-        let newButton = button(title: "Button \(buttons.count + 1)")
-        newButton.frame = (buttons.last ?? cancelButton)!.frame
-        newButton.layer.zPosition = CGFloat(100 - buttons.count)
-        newButton.layoutSubviews()
+    var buttonCount = 0
 
+    @IBAction func add() {
+        buttonCount += 1
+
+        let newButton = button(title: "Button \(buttonCount)")
+        newButton.frame = (buttons.last ?? cancelButton)!.frame
+        newButton.layer.zPosition = CGFloat(1000 - buttonCount)
+        newButton.layoutSubviews()
+        newButton.addTarget(self, action: #selector(MenuViewController.removeButton(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(newButton)
         buttons.append(newButton)
 
         layoutMenu(animated: true)
+    }
+
+    @IBAction func removeButton(sender: UIButton) {
+        UIView.animateWithDuration(0.3, animations: { 
+            sender.alpha = 0
+        }) { _ in
+            sender.removeFromSuperview()
+            self.buttons = self.buttons.filter { $0 != sender }
+            self.layoutMenu(animated: true)
+        }
     }
 
     func layoutMenu(animated animated: Bool) {

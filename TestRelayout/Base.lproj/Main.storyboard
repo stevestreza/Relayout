@@ -5,7 +5,6 @@
         <development version="7000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -28,7 +27,7 @@
         <!--Item 2-->
         <scene sceneID="HKp-9A-dFV">
             <objects>
-                <viewController id="i6A-5Z-0PV" customClass="MenuViewController" customModule="DeclarativeAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i6A-5Z-0PV" customClass="MenuViewController" customModule="TestRelayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mls-yr-Qhn"/>
                         <viewControllerLayoutGuide type="bottom" id="mwE-Rq-vCj"/>
@@ -45,14 +44,11 @@
                                 <action selector="toggleMenuVisible" destination="i6A-5Z-0PV" id="Jty-Jw-rUJ"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Remove" id="ZZq-q3-Lz9"/>
-                            <barButtonItem title="Add" id="qTy-Mw-zT9">
-                                <connections>
-                                    <action selector="add" destination="i6A-5Z-0PV" id="KnO-IU-Qlp"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="qTy-Mw-zT9">
+                            <connections>
+                                <action selector="add" destination="i6A-5Z-0PV" id="KnO-IU-Qlp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bZ-Bz-Cue" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,7 +76,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DeclarativeAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestRelayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
