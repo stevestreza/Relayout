@@ -11,7 +11,7 @@
 		A70D4A591D51D29E00DD71AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A581D51D29E00DD71AE /* Assets.xcassets */; };
 		A70D4A5C1D51D29E00DD71AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */; };
 		A70D4A631D51D2FA00DD71AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A611D51D2FA00DD71AE /* MenuViewController.swift */; };
-		A70D4A641D51D2FA00DD71AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A621D51D2FA00DD71AE /* ViewController.swift */; };
+		A70D4A641D51D2FA00DD71AE /* CrustyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A621D51D2FA00DD71AE /* CrustyViewController.swift */; };
 		A70D4A671D51D34E00DD71AE /* Relayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EC54E21D51B15200A579B9 /* Relayout.framework */; };
 		A70D4A6A1D51D39500DD71AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A681D51D39500DD71AE /* Main.storyboard */; };
 		A70D4A6D1D52602B00DD71AE /* ConditionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A6B1D525FDC00DD71AE /* ConditionalLayout.swift */; };
@@ -45,13 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A70D4A4D1D51D29E00DD71AE /* TestRelayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRelayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelayoutSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70D4A581D51D29E00DD71AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70D4A5B1D51D29E00DD71AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70D4A5D1D51D29E00DD71AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A70D4A611D51D2FA00DD71AE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		A70D4A621D51D2FA00DD71AE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A70D4A621D51D2FA00DD71AE /* CrustyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrustyViewController.swift; sourceTree = "<group>"; };
 		A70D4A691D51D39500DD71AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A70D4A6B1D525FDC00DD71AE /* ConditionalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalLayout.swift; sourceTree = "<group>"; };
 		A782C3FC1D52D1570080701E /* TraitCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitCollectionLayout.swift; sourceTree = "<group>"; };
@@ -96,26 +96,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A70D4A4E1D51D29E00DD71AE /* TestRelayout */ = {
+		A70D4A4E1D51D29E00DD71AE /* Sample App */ = {
 			isa = PBXGroup;
 			children = (
 				A70D4A611D51D2FA00DD71AE /* MenuViewController.swift */,
-				A70D4A621D51D2FA00DD71AE /* ViewController.swift */,
+				A70D4A621D51D2FA00DD71AE /* CrustyViewController.swift */,
 				A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */,
 				A70D4A681D51D39500DD71AE /* Main.storyboard */,
 				A70D4A581D51D29E00DD71AE /* Assets.xcassets */,
 				A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */,
 				A70D4A5D1D51D29E00DD71AE /* Info.plist */,
 			);
-			path = TestRelayout;
+			name = "Sample App";
+			path = SampleApp;
 			sourceTree = "<group>";
 		};
 		A7EC54D81D51B15200A579B9 = {
 			isa = PBXGroup;
 			children = (
 				A7EC54E41D51B15200A579B9 /* Framework */,
-				A7EC54F01D51B15300A579B9 /* RelayoutTests */,
-				A70D4A4E1D51D29E00DD71AE /* TestRelayout */,
+				A7EC54F01D51B15300A579B9 /* Tests */,
+				A70D4A4E1D51D29E00DD71AE /* Sample App */,
 				A7EC54E31D51B15200A579B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,7 +126,7 @@
 			children = (
 				A7EC54E21D51B15200A579B9 /* Relayout.framework */,
 				A7EC54EC1D51B15300A579B9 /* RelayoutTests.xctest */,
-				A70D4A4D1D51D29E00DD71AE /* TestRelayout.app */,
+				A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,12 +140,13 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
-		A7EC54F01D51B15300A579B9 /* RelayoutTests */ = {
+		A7EC54F01D51B15300A579B9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */,
 				A7EC54F31D51B15300A579B9 /* Info.plist */,
 			);
+			name = Tests;
 			path = RelayoutTests;
 			sourceTree = "<group>";
 		};
@@ -186,9 +188,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A70D4A4C1D51D29E00DD71AE /* TestRelayout */ = {
+		A70D4A4C1D51D29E00DD71AE /* SampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "TestRelayout" */;
+			buildConfigurationList = A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "SampleApp" */;
 			buildPhases = (
 				A70D4A491D51D29E00DD71AE /* Sources */,
 				A70D4A4A1D51D29E00DD71AE /* Frameworks */,
@@ -199,9 +201,9 @@
 			dependencies = (
 				A70D4A661D51D34A00DD71AE /* PBXTargetDependency */,
 			);
-			name = TestRelayout;
+			name = SampleApp;
 			productName = TestRelayout;
-			productReference = A70D4A4D1D51D29E00DD71AE /* TestRelayout.app */;
+			productReference = A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A7EC54E11D51B15200A579B9 /* Relayout */ = {
@@ -276,7 +278,7 @@
 			targets = (
 				A7EC54E11D51B15200A579B9 /* Relayout */,
 				A7EC54EB1D51B15300A579B9 /* RelayoutTests */,
-				A70D4A4C1D51D29E00DD71AE /* TestRelayout */,
+				A70D4A4C1D51D29E00DD71AE /* SampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70D4A641D51D2FA00DD71AE /* ViewController.swift in Sources */,
+				A70D4A641D51D2FA00DD71AE /* CrustyViewController.swift in Sources */,
 				A70D4A501D51D29E00DD71AE /* AppDelegate.swift in Sources */,
 				A70D4A631D51D2FA00DD71AE /* MenuViewController.swift in Sources */,
 			);
@@ -384,7 +386,7 @@
 				INFOPLIST_FILE = TestRelayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RelayoutSampleApp;
 			};
 			name = Debug;
 		};
@@ -395,7 +397,7 @@
 				INFOPLIST_FILE = TestRelayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RelayoutSampleApp;
 			};
 			name = Release;
 		};
@@ -548,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "TestRelayout" */ = {
+		A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A70D4A5E1D51D29E00DD71AE /* Debug */,

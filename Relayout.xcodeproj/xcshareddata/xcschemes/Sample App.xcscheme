@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-               BuildableName = "TestRelayout.app"
-               BlueprintName = "TestRelayout"
+               BuildableName = "SampleApp.app"
+               BlueprintName = "SampleApp"
                ReferencedContainer = "container:Relayout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-            BuildableName = "TestRelayout.app"
-            BlueprintName = "TestRelayout"
+            BuildableName = "SampleApp.app"
+            BlueprintName = "SampleApp"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-            BuildableName = "TestRelayout.app"
-            BlueprintName = "TestRelayout"
+            BuildableName = "SampleApp.app"
+            BlueprintName = "SampleApp"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-            BuildableName = "TestRelayout.app"
-            BlueprintName = "TestRelayout"
+            BuildableName = "SampleApp.app"
+            BlueprintName = "SampleApp"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

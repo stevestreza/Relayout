@@ -9,7 +9,7 @@
 import Relayout
 import UIKit
 
-class ViewController: UIViewController {
+class CrustyViewController: UIViewController {
 
     var layout: ViewLayout?
 
