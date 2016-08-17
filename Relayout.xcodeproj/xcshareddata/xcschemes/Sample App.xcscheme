@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-               BuildableName = "SampleApp.app"
+               BuildableName = "RelayoutSampleApp.app"
                BlueprintName = "SampleApp"
                ReferencedContainer = "container:Relayout.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-            BuildableName = "SampleApp.app"
+            BuildableName = "RelayoutSampleApp.app"
             BlueprintName = "SampleApp"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-            BuildableName = "SampleApp.app"
+            BuildableName = "RelayoutSampleApp.app"
             BlueprintName = "SampleApp"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D4A4C1D51D29E00DD71AE"
-            BuildableName = "SampleApp.app"
+            BuildableName = "RelayoutSampleApp.app"
             BlueprintName = "SampleApp"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>

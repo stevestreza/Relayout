@@ -6,4 +6,7 @@ before_install:
 
 script:
 - xctool clean build -project Relayout.xcodeproj -scheme Relayout -sdk iphonesimulator
+- xctool clean build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
 - xctool test -project Relayout.xcodeproj -scheme Relayout -sdk iphonesimulator
+- carthage build --no-skip-current
+- pod lib lint

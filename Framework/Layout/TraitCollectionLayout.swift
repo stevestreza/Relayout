@@ -89,10 +89,12 @@ extension LayingOut {
         return when(userInterfaceIdiom: .Pad)
     }
 
+    @available(iOS 9, *)
     var whenTV: TraitCollectionLayout {
         return when(userInterfaceIdiom: .TV)
     }
 
+    @available(iOS 9, *)
     var whenCarPlay: TraitCollectionLayout {
         return when(userInterfaceIdiom: .CarPlay)
     }
