@@ -58,7 +58,7 @@ With Carthage
 
 Add the following to your `Cartfile`:code:. ::
 
-   github stevestreza/Relayouta ~> 1.0
+   github "stevestreza/Relayout" ~> 1.0
 
 Manually
 --------
