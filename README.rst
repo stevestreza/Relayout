@@ -4,7 +4,7 @@ Relayout
 .. image:: video.png
    :target: https://www.youtube.com/watch?v=lPMfXD6NMrs
 
-.. image:: https://travis-ci.org/stevestreza/Relayout/master.svg
+.. image:: https://img.shields.io/travis/stevestreza/Relayout/master.svg?maxAge=2592000
 .. image:: https://camo.githubusercontent.com/3dc8a44a2c3f7ccd5418008d1295aae48466c141/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f43617274686167652d636f6d70617469626c652d3442433531442e7376673f7374796c653d666c6174
 .. image:: https://img.shields.io/cocoapods/v/Relayout.svg?maxAge=2592000
 .. image:: https://img.shields.io/cocoapods/l/Relayout.svg
