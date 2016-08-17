@@ -26,8 +26,7 @@ deploy:
   provider: releases
   api_key: "$GITHUB_API_KEY"
   file: 
-    - "Carthage/Build/iOS/Relayout.framework"
-    - "Carthage/Build/iOS/Relayout.framework.dSYM"
+    - "Carthage/Build/iOS/Relayout.framework.zip"
   skip_cleanup: true,
   on:
     repo: stevestreza/Relayout
