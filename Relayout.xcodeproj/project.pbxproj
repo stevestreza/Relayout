@@ -165,11 +165,11 @@
 				A7EC55021D51B24200A579B9 /* LayingOut.swift */,
 				A7EC55001D51B22D00A579B9 /* ViewLayout.swift */,
 				A7EC55041D51B42200A579B9 /* Layout.swift */,
+				A782C4001D53188C0080701E /* LayoutGroup.swift */,
 				A7EC55061D51B44200A579B9 /* IdentifierLayout.swift */,
 				A70D4A6B1D525FDC00DD71AE /* ConditionalLayout.swift */,
 				A782C3FC1D52D1570080701E /* TraitCollectionLayout.swift */,
 				A782C3FE1D5311E20080701E /* ListLayout.swift */,
-				A782C4001D53188C0080701E /* LayoutGroup.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";

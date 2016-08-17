@@ -36,9 +36,31 @@ Finally, Relayout is not a great tool to use in conjunction with Interface Build
 Installing
 ==========
 
-You will eventually be able to install this with CocoaPods and Carthage.
+You can install Relayout with Carthage, CocoaPods, or manually.
 
-You should probably not use it yet.
+With CocoaPods
+--------------
+
+Add the following to your `Podfile`:code:. ::
+
+   pod 'Relayout', '~> 1.0'
+
+With Carthage
+-------------
+
+Add the following to your `Cartfile`:code:. ::
+
+   github stevestreza/Relayouta ~> 1.0
+
+Manually
+--------
+
+`Relayout.xcodeproj`:code: creates a `Relayout.framework`, so you can include the framework as an Xcode target dependency, and copy/link it into your app. Alternatively, you can include the source files from the Framework target as you see fit.
+
+Swift 3
+-------
+
+When Swift 3 lands the project will be immediately updated to support it with a major update to the version number (e.g. version `2.0.0`:code:).
 
 Usage
 =====
