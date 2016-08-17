@@ -3,6 +3,9 @@ Relayout
 
 .. image:: https://travis-ci.org/stevestreza/Relayout.svg
 
+.. image:: video.png
+   :target: https://www.youtube.com/watch?v=lPMfXD6NMrs
+
 Relayout is a Swift microframework to make using Auto Layout easier with static and dynamic layouts.
 
 Why?
