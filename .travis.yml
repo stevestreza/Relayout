@@ -24,7 +24,7 @@ before_deploy:
 
 deploy:
   provider: releases
-  api_key: "41f97b8535515ddb77a4818fddda3cfd67b822bb"
+  api_key: "$GITHUB_API_KEY"
   file: 
     - "Carthage/Build/iOS/Relayout.framework"
     - "Carthage/Build/iOS/Relayout.framework.dSYM"
