@@ -12,9 +12,6 @@ before_install:
 - brew outdated carthage || brew upgrade carthage
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
-before_script:
-- carthage bootstrap
-
 script:
 - xctool clean build -project Relayout.xcodeproj -scheme Relayout -sdk iphonesimulator
 - xctool clean build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
