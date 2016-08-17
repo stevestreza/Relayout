@@ -1,8 +1,19 @@
 language: objective-c
 osx_image: xcode7.3
+xcode_project: Relayout.xcodeproj
+xcode_sdk: iphonesimulator9.3
+
+env:
+  global:
+    - FRAMEWORK_NAME=Relayout
 
 before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+
+before_script:
+- carthage bootstrap
 
 script:
 - xctool clean build -project Relayout.xcodeproj -scheme Relayout -sdk iphonesimulator
@@ -10,3 +21,18 @@ script:
 - xctool test -project Relayout.xcodeproj -scheme Relayout -sdk iphonesimulator
 - carthage build --no-skip-current
 - pod lib lint
+
+before_deploy:
+- carthage archive $FRAMEWORK_NAME
+
+deploy:
+  provider: releases
+  api_key: "41f97b8535515ddb77a4818fddda3cfd67b822bb"
+  file: 
+    - "Carthage/Build/iOS/Relayout.framework"
+    - "Carthage/Build/iOS/Relayout.framework.dSYM"
+  skip_cleanup: true,
+  on:
+    repo: stevestreza/Relayout
+    tags: true
+
