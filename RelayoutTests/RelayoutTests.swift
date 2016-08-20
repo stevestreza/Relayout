@@ -54,6 +54,23 @@ class RelayoutTests: XCTestCase {
         view.constraints.forEach { XCTAssertEqual($0.identifier, "Test") }
     }
 
+    func testIdentifiedLayoutNumbered() {
+        let (view, _, layout) = newLayout()
+        let identifiedLayout = ViewLayout(rootView: view, layout: layout.identified(by: "Test", numbered: true))
+        XCTAssertEqual(view.constraints.count, 0)
+
+        identifiedLayout.layout()
+        let regex = try! NSRegularExpression(pattern: "Test \\[[0-9]*\\]", options: NSRegularExpressionOptions())
+        view.constraints.forEach { constraint in
+            guard let identifier = constraint.identifier else {
+                XCTAssertNotNil(constraint.identifier)
+                return
+            }
+
+            XCTAssertTrue(regex.matchesInString(identifier, options: NSMatchingOptions(), range: NSRange(location: 0, length: identifier.characters.count)).count == 1)
+        }
+    }
+
     func testConditionalLayout() {
         let (view, subview, layout) = newLayout()
 
