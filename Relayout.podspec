@@ -18,7 +18,9 @@ really dynamic layouts that change or react to UI state changes using Auto Layou
   s.author    = "Steve Streza"
   s.social_media_url   = "https://twitter.com/SteveStreza"
 
-  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
+
   s.source       = { :git => "https://github.com/stevestreza/Relayout.git", :tag => "1.0.0" }
 
   s.source_files  = "Framework", "Framework/**/*.swift"
