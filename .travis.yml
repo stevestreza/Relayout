@@ -6,7 +6,7 @@ xcode_sdk: iphonesimulator10.0
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- bundle install
 
 install:
 - eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
@@ -21,7 +21,7 @@ script:
 - xcodebuild clean -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
 - xcodebuild build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
 - carthage build --no-skip-current
-- pod lib lint
+- bundle exec pod lib lint
 - swift build
 
 before_deploy:
