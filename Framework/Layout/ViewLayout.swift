@@ -63,6 +63,7 @@ public class ViewLayout {
 
 		#if os(OSX)
 			rootView.needsLayout = true
+			rootView.updateConstraintsForSubtreeIfNeeded()
 			rootView.layoutSubtreeIfNeeded()
 		#else
 			rootView.setNeedsLayout()

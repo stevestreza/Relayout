@@ -9,11 +9,19 @@
 import XCTest
 @testable import Relayout
 
+class TestView: UIView {
+	#if os(OSX)
+	override var flipped: Bool {
+		return true
+	}
+	#endif
+}
+
 class RelayoutTests: XCTestCase {
     func newLayout() -> (UIView, UIView, LayingOut)  {
-        let view = UIView(frame: .zero)
+        let view = TestView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         view.translatesAutoresizingMaskIntoConstraints = false
-        let subview = UIView(frame: .zero)
+        let subview = TestView(frame: .zero)
         subview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subview)
 
