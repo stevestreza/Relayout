@@ -26,13 +26,13 @@ script:
 before_deploy:
 - carthage archive Relayout
 
-deploy:
-  provider: releases
-  api_key: "$GITHUB_API_KEY"
-  file: 
-    - "Relayout.framework.zip"
-  skip_cleanup: true
-  on:
-    repo: stevestreza/Relayout
-    tags: true
+# deploy:
+#  provider: releases
+#  api_key: "$GITHUB_API_KEY"
+#  file: 
+#    - "Relayout.framework.zip"
+#  skip_cleanup: true
+#  on:
+#    repo: stevestreza/Relayout
+#    tags: true
 
