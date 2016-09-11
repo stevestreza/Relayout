@@ -15,8 +15,22 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E8135DD1D84F393008C310F"
-               BuildableName = "Relayout-macOS.framework"
+               BuildableName = "Relayout.framework"
                BlueprintName = "Relayout-macOS"
+               ReferencedContainer = "container:Relayout.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E8135FF1D84F931008C310F"
+               BuildableName = "RelayoutTests-macOS.xctest"
+               BlueprintName = "RelayoutTests-macOS"
                ReferencedContainer = "container:Relayout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E8135FF1D84F931008C310F"
+               BuildableName = "RelayoutTests-macOS.xctest"
+               BlueprintName = "RelayoutTests-macOS"
+               ReferencedContainer = "container:Relayout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1E8135DD1D84F393008C310F"
+            BuildableName = "Relayout.framework"
+            BlueprintName = "Relayout-macOS"
+            ReferencedContainer = "container:Relayout.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -46,7 +79,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E8135DD1D84F393008C310F"
-            BuildableName = "Relayout-macOS.framework"
+            BuildableName = "Relayout.framework"
             BlueprintName = "Relayout-macOS"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>
@@ -64,7 +97,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E8135DD1D84F393008C310F"
-            BuildableName = "Relayout-macOS.framework"
+            BuildableName = "Relayout.framework"
             BlueprintName = "Relayout-macOS"
             ReferencedContainer = "container:Relayout.xcodeproj">
          </BuildableReference>

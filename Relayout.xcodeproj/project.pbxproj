@@ -24,6 +24,13 @@
 		1E8135E51D84F393008C310F /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55041D51B42200A579B9 /* Layout.swift */; };
 		1E8135E61D84F393008C310F /* LayoutGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782C4001D53188C0080701E /* LayoutGroup.swift */; };
 		1E8135E91D84F393008C310F /* Relayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EC54E51D51B15200A579B9 /* Relayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E8135F61D84F90F008C310F /* RelayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */; };
+		1E8135F81D84F90F008C310F /* Relayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EC54E21D51B15200A579B9 /* Relayout.framework */; };
+		1E8136031D84F931008C310F /* RelayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */; };
+		1E8136051D84F931008C310F /* Relayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EC54E21D51B15200A579B9 /* Relayout.framework */; };
+		1E81360F1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360C1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist */; };
+		1E8136101D84FA0A008C310F /* RelayoutTests-macOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360D1D84FA0A008C310F /* RelayoutTests-macOS-Info.plist */; };
+		1E8136111D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360E1D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist */; };
 		A70D4A501D51D29E00DD71AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */; };
 		A70D4A591D51D29E00DD71AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A581D51D29E00DD71AE /* Assets.xcassets */; };
 		A70D4A5C1D51D29E00DD71AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */; };
@@ -45,6 +52,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E8135F41D84F90F008C310F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7EC54D91D51B15200A579B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7EC54E11D51B15200A579B9;
+			remoteInfo = Relayout;
+		};
+		1E8136011D84F931008C310F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7EC54D91D51B15200A579B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7EC54E11D51B15200A579B9;
+			remoteInfo = Relayout;
+		};
 		A70D4A651D51D34A00DD71AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7EC54D91D51B15200A579B9 /* Project object */;
@@ -66,6 +87,11 @@
 		1E8135EE1D84F393008C310F /* Relayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8135F01D84F84B008C310F /* Relayout-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-macOS-Info.plist"; sourceTree = "<group>"; };
 		1E8135F11D84F84B008C310F /* Relayout-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-tvOS-Info.plist"; sourceTree = "<group>"; };
+		1E8135FD1D84F90F008C310F /* RelayoutTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RelayoutTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E81360A1D84F931008C310F /* RelayoutTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RelayoutTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E81360C1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-iOS-Info.plist"; sourceTree = "<group>"; };
+		1E81360D1D84FA0A008C310F /* RelayoutTests-macOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-macOS-Info.plist"; sourceTree = "<group>"; };
+		1E81360E1D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-tvOS-Info.plist"; sourceTree = "<group>"; };
 		A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelayoutSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70D4A581D51D29E00DD71AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +109,6 @@
 		A7EC54E71D51B15300A579B9 /* Relayout-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-iOS-Info.plist"; sourceTree = "<group>"; };
 		A7EC54EC1D51B15300A579B9 /* RelayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayoutTests.swift; sourceTree = "<group>"; };
-		A7EC54F31D51B15300A579B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7EC55001D51B22D00A579B9 /* ViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLayout.swift; sourceTree = "<group>"; };
 		A7EC55021D51B24200A579B9 /* LayingOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayingOut.swift; sourceTree = "<group>"; };
 		A7EC55041D51B42200A579B9 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
@@ -102,6 +127,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8135F71D84F90F008C310F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8135F81D84F90F008C310F /* Relayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8136041D84F931008C310F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8136051D84F931008C310F /* Relayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +205,8 @@
 				A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */,
 				1E8135DB1D84F323008C310F /* Relayout.framework */,
 				1E8135EE1D84F393008C310F /* Relayout.framework */,
+				1E8135FD1D84F90F008C310F /* RelayoutTests-tvOS.xctest */,
+				1E81360A1D84F931008C310F /* RelayoutTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,8 +223,10 @@
 		A7EC54F01D51B15300A579B9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1E81360C1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist */,
+				1E81360D1D84FA0A008C310F /* RelayoutTests-macOS-Info.plist */,
+				1E81360E1D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist */,
 				A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */,
-				A7EC54F31D51B15300A579B9 /* Info.plist */,
 			);
 			name = Tests;
 			path = RelayoutTests;
@@ -279,6 +324,42 @@
 			productReference = 1E8135EE1D84F393008C310F /* Relayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1E8135F21D84F90F008C310F /* RelayoutTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E8135FA1D84F90F008C310F /* Build configuration list for PBXNativeTarget "RelayoutTests-tvOS" */;
+			buildPhases = (
+				1E8135F51D84F90F008C310F /* Sources */,
+				1E8135F71D84F90F008C310F /* Frameworks */,
+				1E8135F91D84F90F008C310F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E8135F31D84F90F008C310F /* PBXTargetDependency */,
+			);
+			name = "RelayoutTests-tvOS";
+			productName = RelayoutTests;
+			productReference = 1E8135FD1D84F90F008C310F /* RelayoutTests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E8135FF1D84F931008C310F /* RelayoutTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E8136071D84F931008C310F /* Build configuration list for PBXNativeTarget "RelayoutTests-macOS" */;
+			buildPhases = (
+				1E8136021D84F931008C310F /* Sources */,
+				1E8136041D84F931008C310F /* Frameworks */,
+				1E8136061D84F931008C310F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E8136001D84F931008C310F /* PBXTargetDependency */,
+			);
+			name = "RelayoutTests-macOS";
+			productName = RelayoutTests;
+			productReference = 1E81360A1D84F931008C310F /* RelayoutTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A70D4A4C1D51D29E00DD71AE /* SampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "SampleApp" */;
@@ -368,9 +449,11 @@
 			projectRoot = "";
 			targets = (
 				A7EC54E11D51B15200A579B9 /* Relayout */,
-				1E8135CA1D84F323008C310F /* Relayout-tvOS */,
-				1E8135DD1D84F393008C310F /* Relayout-macOS */,
 				A7EC54EB1D51B15300A579B9 /* RelayoutTests */,
+				1E8135CA1D84F323008C310F /* Relayout-tvOS */,
+				1E8135F21D84F90F008C310F /* RelayoutTests-tvOS */,
+				1E8135DD1D84F393008C310F /* Relayout-macOS */,
+				1E8135FF1D84F931008C310F /* RelayoutTests-macOS */,
 				A70D4A4C1D51D29E00DD71AE /* SampleApp */,
 			);
 		};
@@ -391,6 +474,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E8135F91D84F90F008C310F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8136061D84F931008C310F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A70D4A4B1D51D29E00DD71AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +502,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E81360F1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist in Resources */,
+				1E8136101D84FA0A008C310F /* RelayoutTests-macOS-Info.plist in Resources */,
+				1E8136111D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +547,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E8135F51D84F90F008C310F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8135F61D84F90F008C310F /* RelayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8136021D84F931008C310F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8136031D84F931008C310F /* RelayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A70D4A491D51D29E00DD71AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +599,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1E8135F31D84F90F008C310F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7EC54E11D51B15200A579B9 /* Relayout */;
+			targetProxy = 1E8135F41D84F90F008C310F /* PBXContainerItemProxy */;
+		};
+		1E8136001D84F931008C310F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7EC54E11D51B15200A579B9 /* Relayout */;
+			targetProxy = 1E8136011D84F931008C310F /* PBXContainerItemProxy */;
+		};
 		A70D4A661D51D34A00DD71AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7EC54E11D51B15200A579B9 /* Relayout */;
@@ -585,13 +711,53 @@
 			};
 			name = Release;
 		};
+		1E8135FB1D84F90F008C310F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-tvOS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E8135FC1D84F90F008C310F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-tvOS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1E8136081D84F931008C310F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-macOS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E8136091D84F931008C310F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-macOS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A70D4A5E1D51D29E00DD71AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout.macOS;
 				PRODUCT_NAME = RelayoutSampleApp;
 			};
 			name = Debug;
@@ -602,7 +768,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout.macOS;
 				PRODUCT_NAME = RelayoutSampleApp;
 			};
 			name = Release;
@@ -736,7 +902,7 @@
 		A7EC54FA1D51B15300A579B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = RelayoutTests/Info.plist;
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-iOS-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -746,7 +912,7 @@
 		A7EC54FB1D51B15300A579B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = RelayoutTests/Info.plist;
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-iOS-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -770,6 +936,24 @@
 			buildConfigurations = (
 				1E8135EC1D84F393008C310F /* Debug */,
 				1E8135ED1D84F393008C310F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E8135FA1D84F90F008C310F /* Build configuration list for PBXNativeTarget "RelayoutTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E8135FB1D84F90F008C310F /* Debug */,
+				1E8135FC1D84F90F008C310F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E8136071D84F931008C310F /* Build configuration list for PBXNativeTarget "RelayoutTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E8136081D84F931008C310F /* Debug */,
+				1E8136091D84F931008C310F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
