@@ -19,6 +19,7 @@ script:
 - xcodebuild clean -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
 - xcodebuild test -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
 - xcodebuild clean -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
+- xcodebuild build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
 - carthage build --no-skip-current
 - pod lib lint
 - swift build
