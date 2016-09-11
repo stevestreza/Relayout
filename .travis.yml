@@ -15,11 +15,11 @@ before_install:
 script:
 - xctool clean build -project Relayout.xcodeproj -scheme "Relayout (iOS)" -sdk iphonesimulator
 - xctool clean build -project Relayout.xcodeproj -scheme "Relayout (tvOS)" -sdk iphonesimulator
-- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (macOS)"
+- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (macOS)" -sdk macosx
 - xctool clean build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
 - xctool test -project Relayout.xcodeproj -scheme "Relayout (iOS)" -sdk iphonesimulator
 - xctool test -project Relayout.xcodeproj -scheme "Relayout (tvOS)" -sdk iphonesimulator
-- xctool test -project Relayout.xcodeproj -scheme "Relayout (macOS)"
+- xctool test -project Relayout.xcodeproj -scheme "Relayout (macOS)" -sdk macosx
 - carthage build --no-skip-current
 - pod lib lint
 
