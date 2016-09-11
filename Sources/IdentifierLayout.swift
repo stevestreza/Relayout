@@ -73,7 +73,7 @@ public extension IdentifierLayout {
 
      - returns: A new IdentifierLayout with the given String identifier and closure.
      */
-    public init(identifier: String, numbered: Bool = false, handler: (UIView) -> [NSLayoutConstraint]) {
+    public init(identifier: String, numbered: Bool = false, handler: @escaping (UIView) -> [NSLayoutConstraint]) {
         self.init(identifier: identifier, numbered: numbered, layout: Layout(handler: handler))
     }
 }

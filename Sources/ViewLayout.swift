@@ -57,9 +57,9 @@ public class ViewLayout {
         guard isLayingOut == false else { return }
         isLayingOut = true
 
-        NSLayoutConstraint.deactivateConstraints(activeConstraints)
+        NSLayoutConstraint.deactivate(activeConstraints)
         activeConstraints = layouts.flatMap { $0.constraints(in: self.rootView) }
-        NSLayoutConstraint.activateConstraints(activeConstraints)
+        NSLayoutConstraint.activate(activeConstraints)
 
 		#if os(OSX)
 			rootView.needsLayout = true

@@ -144,7 +144,7 @@ extension LayingOut {
      - returns: A new TraitCollectionLayout checking against a given UITraitCollection and returning
      the NSLayoutConstraint objects from the called LayingOut object.
      */
-    func when(horizontalSizeClass horizontalSizeClass: UIUserInterfaceSizeClass, verticalSizeClass: UIUserInterfaceSizeClass) -> TraitCollectionLayout {
+    func when(horizontalSizeClass: UIUserInterfaceSizeClass, verticalSizeClass: UIUserInterfaceSizeClass) -> TraitCollectionLayout {
         return TraitCollectionLayout(horizontalSizeClass: horizontalSizeClass, verticalSizeClass: verticalSizeClass, layout: self)
     }
     

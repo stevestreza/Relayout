@@ -50,14 +50,14 @@ public struct LayoutGroup: LayingOut {
 public func +(lhs: LayingOut, rhs: LayingOut) -> LayoutGroup {
     var layouts: [LayingOut] = []
     if let lhsGroup = lhs as? LayoutGroup {
-        layouts.appendContentsOf(lhsGroup.layouts)
+        layouts.append(contentsOf: lhsGroup.layouts)
     }
     else {
         layouts.append(lhs)
     }
 
     if let rhsGroup = rhs as? LayoutGroup {
-        layouts.appendContentsOf(rhsGroup.layouts)
+        layouts.append(contentsOf: rhsGroup.layouts)
     }
     else {
         layouts.append(rhs)

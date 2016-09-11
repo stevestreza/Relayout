@@ -37,7 +37,7 @@ public struct ListLayout<T>: LayingOut {
 
      - returns: An Array<NSLayoutConstraint> to use for the given element.
      */
-    public let itemIterator: (rootView: UIView, element: Element, index: Int, previous: Element?, next: Element?) -> [NSLayoutConstraint]
+    public let itemIterator: (_ rootView: UIView, _ element: Element, _ index: Int, _ previous: Element?, _ next: Element?) -> [NSLayoutConstraint]
 
     /**
      Creates a new ListLayout with the given items obtainer and item iterator.
@@ -47,7 +47,7 @@ public struct ListLayout<T>: LayingOut {
 
      - returns: A new ListLayout object with the given items obtainer and item iterator
      */
-    public init(items: (UIView) -> Array<Element>, iterator: (rootView: UIView, element: Element, index: Int, previous: Element?, next: Element?) -> [NSLayoutConstraint]) {
+    public init(items: @escaping (UIView) -> Array<Element>, iterator: @escaping (_ rootView: UIView, _ element: Element, _ index: Int, _ previous: Element?, _ next: Element?) -> [NSLayoutConstraint]) {
         itemsObtainer = items
         itemIterator = iterator
     }
@@ -68,8 +68,8 @@ public struct ListLayout<T>: LayingOut {
             let previous: Element? = (index - 1 >= 0 ? items[index - 1] : nil)
             let next: Element? = (index + 1 < items.count ? items[index + 1] : nil)
 
-            let newConstraints = itemIterator(rootView: view, element: element, index: index, previous: previous, next: next)
-            constraints.appendContentsOf(newConstraints)
+            let newConstraints = itemIterator(view, element, index, previous, next)
+            constraints.append(contentsOf: newConstraints)
         }
         return constraints
     }
