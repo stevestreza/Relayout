@@ -4,6 +4,8 @@ import UIKit
 /**
  *    A LayingOut object that returns NSLayoutConstraint objects only when the rootView has certain
  *    traits in its UITraitCollection.
+ *
+ *    Not available on OS X.
  */
 public struct TraitCollectionLayout: LayingOut {
     /// The UITraitCollection to match traits against.
