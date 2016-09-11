@@ -1,4 +1,4 @@
-import Foundation
+#if os(iOS) || os(tvOS)
 import UIKit
 
 /**
@@ -231,3 +231,5 @@ private extension UITraitCollection {
         self.init(traitsFromCollections: collections)
     }
 }
+
+#endif

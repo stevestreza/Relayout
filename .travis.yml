@@ -13,29 +13,25 @@ before_install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (iOS)" -sdk iphonesimulator
-- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (tvOS)" -sdk appletvsimulator
-- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (macOS)" -sdk macosx
+- xctool clean build -project Relayout.xcodeproj -scheme "Relayout" -sdk iphonesimulator
+- xctool test -project Relayout.xcodeproj -scheme "Relayout" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 5s"
+- xctool clean build -project Relayout.xcodeproj -scheme "Relayout" -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 1080p"
+- xctool test -project Relayout.xcodeproj -scheme "Relayout" -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 1080p" 
+- xctool clean build -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
+- xctool test -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
 - xctool clean build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
-- xctool test -project Relayout.xcodeproj -scheme "Relayout (iOS)" -sdk iphonesimulator
-- xctool test -project Relayout.xcodeproj -scheme "Relayout (tvOS)" -sdk appletvsimulator 
-- xctool test -project Relayout.xcodeproj -scheme "Relayout (macOS)" -sdk macosx
 - carthage build --no-skip-current
 - pod lib lint
 
 before_deploy:
 - carthage archive Relayout
-- carthage archive Relayout-tvOS
-- carthage archive Relayout-macOS
 
 deploy:
   provider: releases
   api_key: "$GITHUB_API_KEY"
   file: 
     - "Relayout.framework.zip"
-    - "Relayout-tvOS.framework.zip"
-    - "Relayout-macOS.framework.zip"
-  skip_cleanup: true,
+  skip_cleanup: true
   on:
     repo: stevestreza/Relayout
     tags: true

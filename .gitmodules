@@ -1,0 +1,3 @@
+[submodule "xcconfigs"]
+	path = xcconfigs
+	url = https://github.com/mrackwitz/xcconfigs.git
