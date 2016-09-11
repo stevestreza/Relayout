@@ -1,7 +1,6 @@
 import Foundation
 #if os(OSX)
 import AppKit
-public typealias UIView = NSView
 #else
 import UIKit
 #endif
