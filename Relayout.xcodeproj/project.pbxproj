@@ -149,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9BC247281D85128400A8E79B /* Configuration */,
+				A7EC54FF1D51B20B00A579B9 /* Sources */,
 				A7EC54E41D51B15200A579B9 /* Framework */,
 				A7EC54F01D51B15300A579B9 /* Tests */,
 				A70D4A4E1D51D29E00DD71AE /* Sample App */,
@@ -169,8 +170,8 @@
 		A7EC54E41D51B15200A579B9 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				A7EC54FF1D51B20B00A579B9 /* Layout */,
-				A7EC54FE1D51B1FF00A579B9 /* Support Files */,
+				A7EC54E51D51B15200A579B9 /* Relayout.h */,
+				A7EC54E71D51B15300A579B9 /* Relayout-Info.plist */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -185,16 +186,7 @@
 			path = RelayoutTests;
 			sourceTree = "<group>";
 		};
-		A7EC54FE1D51B1FF00A579B9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A7EC54E51D51B15200A579B9 /* Relayout.h */,
-				A7EC54E71D51B15300A579B9 /* Relayout-Info.plist */,
-			);
-			name = "Support Files";
-			sourceTree = "<group>";
-		};
-		A7EC54FF1D51B20B00A579B9 /* Layout */ = {
+		A7EC54FF1D51B20B00A579B9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				A7EC55021D51B24200A579B9 /* LayingOut.swift */,
@@ -207,7 +199,7 @@
 				A782C3FE1D5311E20080701E /* ListLayout.swift */,
 				9BC247241D850FD500A8E79B /* PlatformSupport.swift */,
 			);
-			path = Layout;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
