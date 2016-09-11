@@ -1,5 +1,10 @@
 import Foundation
+#if os(OSX)
+import AppKit
+public typealias UIView = NSView
+#else
 import UIKit
+#endif
 
 /**
  *    A LayingOut object that merges the NSLayoutConstraint objects from an Array of LayingOut

@@ -1,5 +1,9 @@
 import Foundation
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Manages a context of NSLayoutConstraint objects that will be applied to a given view.
 public class ViewLayout {
@@ -57,8 +61,13 @@ public class ViewLayout {
         activeConstraints = layouts.flatMap { $0.constraints(in: self.rootView) }
         NSLayoutConstraint.activateConstraints(activeConstraints)
 
-        rootView.setNeedsLayout()
-        rootView.layoutIfNeeded()
+		#if os(OSX)
+			rootView.needsLayout = true
+			rootView.layoutSubtreeIfNeeded()
+		#else
+			rootView.setNeedsLayout()
+			rootView.layoutIfNeeded()
+		#endif
 
         isLayingOut = false
     }

@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E8135CC1D84F323008C310F /* ConditionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A6B1D525FDC00DD71AE /* ConditionalLayout.swift */; };
+		1E8135CD1D84F323008C310F /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782C3FE1D5311E20080701E /* ListLayout.swift */; };
+		1E8135CE1D84F323008C310F /* LayingOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55021D51B24200A579B9 /* LayingOut.swift */; };
+		1E8135CF1D84F323008C310F /* ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55001D51B22D00A579B9 /* ViewLayout.swift */; };
+		1E8135D01D84F323008C310F /* IdentifierLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55061D51B44200A579B9 /* IdentifierLayout.swift */; };
+		1E8135D11D84F323008C310F /* TraitCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782C3FC1D52D1570080701E /* TraitCollectionLayout.swift */; };
+		1E8135D21D84F323008C310F /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55041D51B42200A579B9 /* Layout.swift */; };
+		1E8135D31D84F323008C310F /* LayoutGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782C4001D53188C0080701E /* LayoutGroup.swift */; };
+		1E8135D61D84F323008C310F /* Relayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EC54E51D51B15200A579B9 /* Relayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E8135DF1D84F393008C310F /* ConditionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A6B1D525FDC00DD71AE /* ConditionalLayout.swift */; };
+		1E8135E01D84F393008C310F /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782C3FE1D5311E20080701E /* ListLayout.swift */; };
+		1E8135E11D84F393008C310F /* LayingOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55021D51B24200A579B9 /* LayingOut.swift */; };
+		1E8135E21D84F393008C310F /* ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55001D51B22D00A579B9 /* ViewLayout.swift */; };
+		1E8135E31D84F393008C310F /* IdentifierLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55061D51B44200A579B9 /* IdentifierLayout.swift */; };
+		1E8135E51D84F393008C310F /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC55041D51B42200A579B9 /* Layout.swift */; };
+		1E8135E61D84F393008C310F /* LayoutGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782C4001D53188C0080701E /* LayoutGroup.swift */; };
+		1E8135E91D84F393008C310F /* Relayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EC54E51D51B15200A579B9 /* Relayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A70D4A501D51D29E00DD71AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */; };
 		A70D4A591D51D29E00DD71AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A581D51D29E00DD71AE /* Assets.xcassets */; };
 		A70D4A5C1D51D29E00DD71AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */; };
@@ -45,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E8135DB1D84F323008C310F /* Relayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E8135EE1D84F393008C310F /* Relayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E8135F01D84F84B008C310F /* Relayout-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-macOS-Info.plist"; sourceTree = "<group>"; };
+		1E8135F11D84F84B008C310F /* Relayout-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-tvOS-Info.plist"; sourceTree = "<group>"; };
 		A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelayoutSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70D4A581D51D29E00DD71AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +80,7 @@
 		A782C4001D53188C0080701E /* LayoutGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGroup.swift; sourceTree = "<group>"; };
 		A7EC54E21D51B15200A579B9 /* Relayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54E51D51B15200A579B9 /* Relayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relayout.h; sourceTree = "<group>"; };
-		A7EC54E71D51B15300A579B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7EC54E71D51B15300A579B9 /* Relayout-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-iOS-Info.plist"; sourceTree = "<group>"; };
 		A7EC54EC1D51B15300A579B9 /* RelayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayoutTests.swift; sourceTree = "<group>"; };
 		A7EC54F31D51B15300A579B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +91,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E8135D41D84F323008C310F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8135E71D84F393008C310F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A70D4A4A1D51D29E00DD71AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +162,8 @@
 				A7EC54E21D51B15200A579B9 /* Relayout.framework */,
 				A7EC54EC1D51B15300A579B9 /* RelayoutTests.xctest */,
 				A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */,
+				1E8135DB1D84F323008C310F /* Relayout.framework */,
+				1E8135EE1D84F393008C310F /* Relayout.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,7 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				A7EC54E51D51B15200A579B9 /* Relayout.h */,
-				A7EC54E71D51B15300A579B9 /* Info.plist */,
+				A7EC54E71D51B15300A579B9 /* Relayout-iOS-Info.plist */,
+				1E8135F01D84F84B008C310F /* Relayout-macOS-Info.plist */,
+				1E8135F11D84F84B008C310F /* Relayout-tvOS-Info.plist */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -177,6 +216,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1E8135D51D84F323008C310F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8135D61D84F323008C310F /* Relayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8135E81D84F393008C310F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8135E91D84F393008C310F /* Relayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7EC54DF1D51B15200A579B9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +243,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1E8135CA1D84F323008C310F /* Relayout-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E8135D81D84F323008C310F /* Build configuration list for PBXNativeTarget "Relayout-tvOS" */;
+			buildPhases = (
+				1E8135CB1D84F323008C310F /* Sources */,
+				1E8135D41D84F323008C310F /* Frameworks */,
+				1E8135D51D84F323008C310F /* Headers */,
+				1E8135D71D84F323008C310F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Relayout-tvOS";
+			productName = Relayout;
+			productReference = 1E8135DB1D84F323008C310F /* Relayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1E8135DD1D84F393008C310F /* Relayout-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E8135EB1D84F393008C310F /* Build configuration list for PBXNativeTarget "Relayout-macOS" */;
+			buildPhases = (
+				1E8135DE1D84F393008C310F /* Sources */,
+				1E8135E71D84F393008C310F /* Frameworks */,
+				1E8135E81D84F393008C310F /* Headers */,
+				1E8135EA1D84F393008C310F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Relayout-macOS";
+			productName = Relayout;
+			productReference = 1E8135EE1D84F393008C310F /* Relayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A70D4A4C1D51D29E00DD71AE /* SampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "SampleApp" */;
@@ -277,6 +368,8 @@
 			projectRoot = "";
 			targets = (
 				A7EC54E11D51B15200A579B9 /* Relayout */,
+				1E8135CA1D84F323008C310F /* Relayout-tvOS */,
+				1E8135DD1D84F393008C310F /* Relayout-macOS */,
 				A7EC54EB1D51B15300A579B9 /* RelayoutTests */,
 				A70D4A4C1D51D29E00DD71AE /* SampleApp */,
 			);
@@ -284,6 +377,20 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E8135D71D84F323008C310F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8135EA1D84F393008C310F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A70D4A4B1D51D29E00DD71AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,6 +418,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E8135CB1D84F323008C310F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8135CC1D84F323008C310F /* ConditionalLayout.swift in Sources */,
+				1E8135CD1D84F323008C310F /* ListLayout.swift in Sources */,
+				1E8135CE1D84F323008C310F /* LayingOut.swift in Sources */,
+				1E8135CF1D84F323008C310F /* ViewLayout.swift in Sources */,
+				1E8135D01D84F323008C310F /* IdentifierLayout.swift in Sources */,
+				1E8135D11D84F323008C310F /* TraitCollectionLayout.swift in Sources */,
+				1E8135D21D84F323008C310F /* Layout.swift in Sources */,
+				1E8135D31D84F323008C310F /* LayoutGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8135DE1D84F393008C310F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8135DF1D84F393008C310F /* ConditionalLayout.swift in Sources */,
+				1E8135E01D84F393008C310F /* ListLayout.swift in Sources */,
+				1E8135E11D84F393008C310F /* LayingOut.swift in Sources */,
+				1E8135E21D84F393008C310F /* ViewLayout.swift in Sources */,
+				1E8135E31D84F393008C310F /* IdentifierLayout.swift in Sources */,
+				1E8135E51D84F393008C310F /* Layout.swift in Sources */,
+				1E8135E61D84F393008C310F /* LayoutGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A70D4A491D51D29E00DD71AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +515,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E8135D91D84F323008C310F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
+				PRODUCT_NAME = Relayout;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E8135DA1D84F323008C310F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
+				PRODUCT_NAME = Relayout;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1E8135EC1D84F393008C310F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
+				PRODUCT_NAME = Relayout;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E8135ED1D84F393008C310F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
+				PRODUCT_NAME = Relayout;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		A70D4A5E1D51D29E00DD71AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -500,7 +706,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
@@ -518,7 +724,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
@@ -550,6 +756,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E8135D81D84F323008C310F /* Build configuration list for PBXNativeTarget "Relayout-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E8135D91D84F323008C310F /* Debug */,
+				1E8135DA1D84F323008C310F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E8135EB1D84F393008C310F /* Build configuration list for PBXNativeTarget "Relayout-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E8135EC1D84F393008C310F /* Debug */,
+				1E8135ED1D84F393008C310F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A70D4A601D51D29E00DD71AE /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

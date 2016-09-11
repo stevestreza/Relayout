@@ -1,5 +1,9 @@
 import Foundation
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 /**
  *    A LayingOut object that returns NSLayoutConstraint objects from a closure.
