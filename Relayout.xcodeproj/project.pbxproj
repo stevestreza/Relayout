@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E81360F1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360C1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist */; };
-		1E8136101D84FA0A008C310F /* RelayoutTests-macOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360D1D84FA0A008C310F /* RelayoutTests-macOS-Info.plist */; };
-		1E8136111D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360E1D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist */; };
+		1E81360F1D84FA0A008C310F /* RelayoutTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360C1D84FA0A008C310F /* RelayoutTests-Info.plist */; };
 		9BC247251D850FD500A8E79B /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC247241D850FD500A8E79B /* PlatformSupport.swift */; };
 		A70D4A501D51D29E00DD71AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */; };
 		A70D4A591D51D29E00DD71AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A581D51D29E00DD71AE /* Assets.xcassets */; };
@@ -49,11 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E8135F01D84F84B008C310F /* Relayout-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-macOS-Info.plist"; sourceTree = "<group>"; };
-		1E8135F11D84F84B008C310F /* Relayout-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-tvOS-Info.plist"; sourceTree = "<group>"; };
-		1E81360C1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-iOS-Info.plist"; sourceTree = "<group>"; };
-		1E81360D1D84FA0A008C310F /* RelayoutTests-macOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-macOS-Info.plist"; sourceTree = "<group>"; };
-		1E81360E1D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-tvOS-Info.plist"; sourceTree = "<group>"; };
+		1E81360C1D84FA0A008C310F /* RelayoutTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-Info.plist"; sourceTree = "<group>"; };
 		9BBC67761D850D75003A78F1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9BBC67771D850D75003A78F1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9BBC67781D850D75003A78F1 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
@@ -77,7 +71,7 @@
 		A782C4001D53188C0080701E /* LayoutGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGroup.swift; sourceTree = "<group>"; };
 		A7EC54E21D51B15200A579B9 /* Relayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54E51D51B15200A579B9 /* Relayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relayout.h; sourceTree = "<group>"; };
-		A7EC54E71D51B15300A579B9 /* Relayout-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-iOS-Info.plist"; sourceTree = "<group>"; };
+		A7EC54E71D51B15300A579B9 /* Relayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-Info.plist"; sourceTree = "<group>"; };
 		A7EC54EC1D51B15300A579B9 /* RelayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayoutTests.swift; sourceTree = "<group>"; };
 		A7EC55001D51B22D00A579B9 /* ViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLayout.swift; sourceTree = "<group>"; };
@@ -184,9 +178,7 @@
 		A7EC54F01D51B15300A579B9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1E81360C1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist */,
-				1E81360D1D84FA0A008C310F /* RelayoutTests-macOS-Info.plist */,
-				1E81360E1D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist */,
+				1E81360C1D84FA0A008C310F /* RelayoutTests-Info.plist */,
 				A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */,
 			);
 			name = Tests;
@@ -197,9 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A7EC54E51D51B15200A579B9 /* Relayout.h */,
-				A7EC54E71D51B15300A579B9 /* Relayout-iOS-Info.plist */,
-				1E8135F01D84F84B008C310F /* Relayout-macOS-Info.plist */,
-				1E8135F11D84F84B008C310F /* Relayout-tvOS-Info.plist */,
+				A7EC54E71D51B15300A579B9 /* Relayout-Info.plist */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -344,9 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E81360F1D84FA0A008C310F /* RelayoutTests-iOS-Info.plist in Resources */,
-				1E8136101D84FA0A008C310F /* RelayoutTests-macOS-Info.plist in Resources */,
-				1E8136111D84FA0A008C310F /* RelayoutTests-tvOS-Info.plist in Resources */,
+				1E81360F1D84FA0A008C310F /* RelayoutTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +534,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-iOS-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
@@ -565,7 +553,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-iOS-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
@@ -578,7 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BC247291D85130300A8E79B /* RelayoutTests.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-iOS-Info.plist";
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,7 +578,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BC247291D85130300A8E79B /* RelayoutTests.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-iOS-Info.plist";
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
