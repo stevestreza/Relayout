@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Relayout"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "Swift microframework for declaring Auto Layout constraints functionally"
 
   s.description  = <<-DESC
@@ -20,10 +20,14 @@ really dynamic layouts that change or react to UI state changes using Auto Layou
 
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target = '10.10'
 
-  s.source       = { :git => "https://github.com/stevestreza/Relayout.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/stevestreza/Relayout.git", :tag => "1.1.0" }
 
   s.source_files  = "Framework", "Framework/**/*.swift"
 
-  s.frameworks = "Foundation", "UIKit"
+  s.frameworks = "Foundation"
+  s.ios.frameworks = "UIKit"
+  s.tvos.frameworks = "UIKit"
+  s.osx.frameworks = "AppKit"
 end
