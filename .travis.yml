@@ -13,9 +13,13 @@ before_install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xctool clean build -project Relayout.xcodeproj -scheme Relayout -sdk iphonesimulator
+- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (iOS)"
+- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (tvOS)"
+- xctool clean build -project Relayout.xcodeproj -scheme "Relayout (macOS)"
 - xctool clean build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
-- xctool test -project Relayout.xcodeproj -scheme Relayout -sdk iphonesimulator
+- xctool test -project Relayout.xcodeproj -scheme "Relayout (iOS)"
+- xctool test -project Relayout.xcodeproj -scheme "Relayout (tvOS)"
+- xctool test -project Relayout.xcodeproj -scheme "Relayout (macOS)"
 - carthage build --no-skip-current
 - pod lib lint
 
