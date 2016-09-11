@@ -657,6 +657,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
 		};
@@ -675,6 +676,7 @@
 				PRODUCT_NAME = Relayout;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Release;
 		};
@@ -689,6 +691,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-macOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
 				PRODUCT_NAME = Relayout;
 				SDKROOT = macosx;
@@ -708,6 +711,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-macOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
 				PRODUCT_NAME = Relayout;
 				SDKROOT = macosx;
