@@ -7,6 +7,8 @@ before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/d1db86e02ec31e93c623d4632f8b229c8a8c1793/swiftenv-install.sh | bash
+- . ~/.swiftenv/init
 
 script:
 - xctool clean build -project Relayout.xcodeproj -scheme "Relayout" -sdk iphonesimulator
