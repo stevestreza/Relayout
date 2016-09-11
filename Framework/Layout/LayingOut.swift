@@ -1,5 +1,9 @@
 import Foundation
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 /**
  *    Protocol for generating an Array<NSLayoutConstraint> to apply in a given view.

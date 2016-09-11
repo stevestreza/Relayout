@@ -2,4 +2,5 @@
 *.xcuserdatad
 Carthage
 Relayout.framework.zip
+build
 

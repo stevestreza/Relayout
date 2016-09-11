@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E81360F1D84FA0A008C310F /* RelayoutTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E81360C1D84FA0A008C310F /* RelayoutTests-Info.plist */; };
+		9BC247251D850FD500A8E79B /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC247241D850FD500A8E79B /* PlatformSupport.swift */; };
 		A70D4A501D51D29E00DD71AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */; };
 		A70D4A591D51D29E00DD71AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A581D51D29E00DD71AE /* Assets.xcassets */; };
 		A70D4A5C1D51D29E00DD71AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70D4A5A1D51D29E00DD71AE /* LaunchScreen.storyboard */; };
@@ -45,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E81360C1D84FA0A008C310F /* RelayoutTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RelayoutTests-Info.plist"; sourceTree = "<group>"; };
+		9BBC67761D850D75003A78F1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9BBC67771D850D75003A78F1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9BBC67781D850D75003A78F1 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
+		9BBC67791D850D75003A78F1 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
+		9BBC677A1D850D75003A78F1 /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
+		9BC247241D850FD500A8E79B /* PlatformSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformSupport.swift; sourceTree = "<group>"; };
+		9BC247261D85123F00A8E79B /* RelayoutFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RelayoutFramework.xcconfig; sourceTree = "<group>"; };
+		9BC247271D85127F00A8E79B /* RelayoutPlatforms.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RelayoutPlatforms.xcconfig; sourceTree = "<group>"; };
+		9BC247291D85130300A8E79B /* RelayoutTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RelayoutTests.xcconfig; sourceTree = "<group>"; };
 		A70D4A4D1D51D29E00DD71AE /* RelayoutSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelayoutSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70D4A4F1D51D29E00DD71AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70D4A581D51D29E00DD71AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,10 +71,9 @@
 		A782C4001D53188C0080701E /* LayoutGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGroup.swift; sourceTree = "<group>"; };
 		A7EC54E21D51B15200A579B9 /* Relayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54E51D51B15200A579B9 /* Relayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relayout.h; sourceTree = "<group>"; };
-		A7EC54E71D51B15300A579B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7EC54E71D51B15300A579B9 /* Relayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Relayout-Info.plist"; sourceTree = "<group>"; };
 		A7EC54EC1D51B15300A579B9 /* RelayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayoutTests.swift; sourceTree = "<group>"; };
-		A7EC54F31D51B15300A579B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7EC55001D51B22D00A579B9 /* ViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLayout.swift; sourceTree = "<group>"; };
 		A7EC55021D51B24200A579B9 /* LayingOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayingOut.swift; sourceTree = "<group>"; };
 		A7EC55041D51B42200A579B9 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
@@ -96,6 +107,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BBC67751D850D75003A78F1 /* xcconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				9BBC67761D850D75003A78F1 /* LICENSE */,
+				9BBC67771D850D75003A78F1 /* README.md */,
+				9BBC67781D850D75003A78F1 /* UniversalFramework_Base.xcconfig */,
+				9BBC67791D850D75003A78F1 /* UniversalFramework_Framework.xcconfig */,
+				9BBC677A1D850D75003A78F1 /* UniversalFramework_Test.xcconfig */,
+			);
+			path = xcconfigs;
+			sourceTree = "<group>";
+		};
+		9BC247281D85128400A8E79B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				9BBC67751D850D75003A78F1 /* xcconfigs */,
+				9BC247271D85127F00A8E79B /* RelayoutPlatforms.xcconfig */,
+				9BC247261D85123F00A8E79B /* RelayoutFramework.xcconfig */,
+				9BC247291D85130300A8E79B /* RelayoutTests.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 		A70D4A4E1D51D29E00DD71AE /* Sample App */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +148,7 @@
 		A7EC54D81D51B15200A579B9 = {
 			isa = PBXGroup;
 			children = (
+				9BC247281D85128400A8E79B /* Configuration */,
 				A7EC54E41D51B15200A579B9 /* Framework */,
 				A7EC54F01D51B15300A579B9 /* Tests */,
 				A70D4A4E1D51D29E00DD71AE /* Sample App */,
@@ -143,8 +178,8 @@
 		A7EC54F01D51B15300A579B9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1E81360C1D84FA0A008C310F /* RelayoutTests-Info.plist */,
 				A7EC54F11D51B15300A579B9 /* RelayoutTests.swift */,
-				A7EC54F31D51B15300A579B9 /* Info.plist */,
 			);
 			name = Tests;
 			path = RelayoutTests;
@@ -154,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A7EC54E51D51B15200A579B9 /* Relayout.h */,
-				A7EC54E71D51B15300A579B9 /* Info.plist */,
+				A7EC54E71D51B15300A579B9 /* Relayout-Info.plist */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -170,6 +205,7 @@
 				A70D4A6B1D525FDC00DD71AE /* ConditionalLayout.swift */,
 				A782C3FC1D52D1570080701E /* TraitCollectionLayout.swift */,
 				A782C3FE1D5311E20080701E /* ListLayout.swift */,
+				9BC247241D850FD500A8E79B /* PlatformSupport.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -298,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E81360F1D84FA0A008C310F /* RelayoutTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +364,7 @@
 			files = (
 				A70D4A6D1D52602B00DD71AE /* ConditionalLayout.swift in Sources */,
 				A782C3FF1D5311E20080701E /* ListLayout.swift in Sources */,
+				9BC247251D850FD500A8E79B /* PlatformSupport.swift in Sources */,
 				A7EC55031D51B24300A579B9 /* LayingOut.swift in Sources */,
 				A7EC55011D51B22D00A579B9 /* ViewLayout.swift in Sources */,
 				A7EC55071D51B44200A579B9 /* IdentifierLayout.swift in Sources */,
@@ -385,7 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout.macOS;
 				PRODUCT_NAME = RelayoutSampleApp;
 			};
 			name = Debug;
@@ -396,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.TestRelayout.macOS;
 				PRODUCT_NAME = RelayoutSampleApp;
 			};
 			name = Release;
@@ -439,10 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -482,9 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -494,13 +527,14 @@
 		};
 		A7EC54F71D51B15300A579B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC247261D85123F00A8E79B /* RelayoutFramework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
@@ -512,13 +546,14 @@
 		};
 		A7EC54F81D51B15300A579B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC247261D85123F00A8E79B /* RelayoutFramework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Relayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.Relayout;
@@ -529,21 +564,25 @@
 		};
 		A7EC54FA1D51B15300A579B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC247291D85130300A8E79B /* RelayoutTests.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = RelayoutTests/Info.plist;
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		A7EC54FB1D51B15300A579B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC247291D85130300A8E79B /* RelayoutTests.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = RelayoutTests/Info.plist;
+				INFOPLIST_FILE = "RelayoutTests/RelayoutTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevestreza.RelayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

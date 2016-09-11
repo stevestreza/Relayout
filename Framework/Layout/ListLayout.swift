@@ -1,5 +1,9 @@
 import Foundation
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 /**
  *    Iterates over an Array<T> of objects (along with their next and previous items) and generates
