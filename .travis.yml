@@ -24,13 +24,17 @@ script:
 - pod lib lint
 
 before_deploy:
-- carthage archive $FRAMEWORK_NAME
+- carthage archive Relayout
+- carthage archive Relayout-tvOS
+- carthage archive Relayout-macOS
 
 deploy:
   provider: releases
   api_key: "$GITHUB_API_KEY"
   file: 
     - "Relayout.framework.zip"
+    - "Relayout-tvOS.framework.zip"
+    - "Relayout-macOS.framework.zip"
   skip_cleanup: true,
   on:
     repo: stevestreza/Relayout
