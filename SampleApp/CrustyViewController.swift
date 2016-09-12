@@ -30,8 +30,8 @@ class CrustyViewController: UIViewController {
                 var constraints: [NSLayoutConstraint] = []
                 if self.segmentedControl.selectedSegmentIndex == 0 {
                     constraints = [
-                        self.imageView.leadingAnchor.constraintEqualToAnchor(self.targetView.leadingAnchor, constant: inset),
-                        self.imageView.topAnchor.constraintEqualToAnchor(self.targetView.topAnchor, constant: inset)
+                        self.imageView.leadingAnchor.constraint(equalTo: self.targetView.leadingAnchor, constant: inset),
+                        self.imageView.topAnchor.constraint(equalTo: self.targetView.topAnchor, constant: inset)
                     ]
                 }
                 return constraints
@@ -41,8 +41,8 @@ class CrustyViewController: UIViewController {
                 var constraints: [NSLayoutConstraint] = []
                 if self.segmentedControl.selectedSegmentIndex == 1 {
                     constraints = [
-                        self.imageView.trailingAnchor.constraintEqualToAnchor(self.targetView.trailingAnchor, constant: -inset),
-                        self.imageView.topAnchor.constraintEqualToAnchor(self.targetView.topAnchor, constant: inset)
+                        self.imageView.trailingAnchor.constraint(equalTo: self.targetView.trailingAnchor, constant: -inset),
+                        self.imageView.topAnchor.constraint(equalTo: self.targetView.topAnchor, constant: inset)
                     ]
                 }
                 return constraints
@@ -52,8 +52,8 @@ class CrustyViewController: UIViewController {
                 var constraints: [NSLayoutConstraint] = []
                 if self.segmentedControl.selectedSegmentIndex == 2 {
                     constraints = [
-                        self.imageView.leadingAnchor.constraintEqualToAnchor(self.targetView.leadingAnchor, constant: inset),
-                        self.imageView.bottomAnchor.constraintEqualToAnchor(self.targetView.bottomAnchor, constant: -inset)
+                        self.imageView.leadingAnchor.constraint(equalTo: self.targetView.leadingAnchor, constant: inset),
+                        self.imageView.bottomAnchor.constraint(equalTo: self.targetView.bottomAnchor, constant: -inset)
                     ]
                 }
                 return constraints
@@ -63,8 +63,8 @@ class CrustyViewController: UIViewController {
                 var constraints: [NSLayoutConstraint] = []
                 if self.segmentedControl.selectedSegmentIndex == 3 {
                     constraints = [
-                        self.imageView.trailingAnchor.constraintEqualToAnchor(self.targetView.trailingAnchor, constant: -inset),
-                        self.imageView.bottomAnchor.constraintEqualToAnchor(self.targetView.bottomAnchor, constant: -inset)
+                        self.imageView.trailingAnchor.constraint(equalTo: self.targetView.trailingAnchor, constant: -inset),
+                        self.imageView.bottomAnchor.constraint(equalTo: self.targetView.bottomAnchor, constant: -inset)
                     ]
                 }
                 return constraints
@@ -73,16 +73,16 @@ class CrustyViewController: UIViewController {
                 var constraints: [NSLayoutConstraint] = []
                 if self.segmentedControl.selectedSegmentIndex == 4 {
                     constraints = [
-                        self.imageView.centerXAnchor.constraintEqualToAnchor(self.targetView.centerXAnchor, constant: 0),
-                        self.imageView.centerYAnchor.constraintEqualToAnchor(self.targetView.centerYAnchor, constant: 0),
+                        self.imageView.centerXAnchor.constraint(equalTo: self.targetView.centerXAnchor, constant: 0),
+                        self.imageView.centerYAnchor.constraint(equalTo: self.targetView.centerYAnchor, constant: 0),
                     ]
                 }
                 return constraints
             },
             IdentifierLayout(identifier: "Sizing") { _ in 
                 return [
-                    self.imageView.widthAnchor.constraintEqualToAnchor(self.imageView.heightAnchor, multiplier: 1),
-                    self.imageView.widthAnchor.constraintEqualToConstant(CGFloat(self.widthSlider.value))
+                    self.imageView.widthAnchor.constraint(equalTo: self.imageView.heightAnchor, multiplier: 1),
+                    self.imageView.widthAnchor.constraint(equalToConstant: CGFloat(self.widthSlider.value))
                 ]
             },
         ])
@@ -98,8 +98,8 @@ class CrustyViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func updateUI(animated animated: Bool = true) {
-        UIView.animateWithDuration((animated ? 0.5 : 0.0), delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: UIViewAnimationOptions(), animations: {
+    @IBAction func updateUI(animated: Bool = true) {
+        UIView.animate(withDuration: (animated ? 0.5 : 0.0), delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: UIViewAnimationOptions(), animations: {
             self.layout?.layout()
         }, completion: nil)
     }

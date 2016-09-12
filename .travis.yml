@@ -1,27 +1,28 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
 xcode_project: Relayout.xcodeproj
-xcode_sdk: iphonesimulator9.3
-
-env:
-  global:
-    - FRAMEWORK_NAME=Relayout
+xcode_sdk: iphonesimulator10.0
 
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- bundle install
+
+install:
+- eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
 
 script:
-- xctool clean build -project Relayout.xcodeproj -scheme "Relayout" -sdk iphonesimulator
-- xctool test -project Relayout.xcodeproj -scheme "Relayout" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 5s"
-- xctool clean build -project Relayout.xcodeproj -scheme "Relayout" -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 1080p"
-- xctool test -project Relayout.xcodeproj -scheme "Relayout" -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 1080p" 
-- xctool clean build -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
-- xctool test -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
-- xctool clean build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
+- xcodebuild clean -project Relayout.xcodeproj -scheme "Relayout" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 5s"
+- xcodebuild test -project Relayout.xcodeproj -scheme "Relayout" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 5s"
+- xcodebuild clean -project Relayout.xcodeproj -scheme "Relayout" -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 1080p"
+- xcodebuild test -project Relayout.xcodeproj -scheme "Relayout" -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 1080p" 
+- xcodebuild clean -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
+- xcodebuild test -project Relayout.xcodeproj -scheme "Relayout" -sdk macosx
+- xcodebuild clean -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
+- xcodebuild build -project Relayout.xcodeproj -scheme "Sample App" -sdk iphonesimulator
 - carthage build --no-skip-current
-- pod lib lint
+- bundle exec pod lib lint
+- swift build
 
 before_deploy:
 - carthage archive Relayout

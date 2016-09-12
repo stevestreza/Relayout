@@ -19,7 +19,7 @@ public struct Layout: LayingOut {
 
      - returns: A new Layout object for the given closure.
      */
-    public init(handler: (UIView) -> [NSLayoutConstraint]) {
+    public init(handler: @escaping (UIView) -> [NSLayoutConstraint]) {
         self.handler = handler
     }
 

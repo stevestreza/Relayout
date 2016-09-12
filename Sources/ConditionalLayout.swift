@@ -29,7 +29,7 @@ public struct ConditionalLayout: LayingOut {
      - returns: A new ConditionalLayout object with the given conditional closure and LayingOut
      objects.
      */
-    public init(condition: (UIView) -> Bool, layout: LayingOut, elseLayout: LayingOut? = nil) {
+    public init(condition: @escaping (UIView) -> Bool, layout: LayingOut, elseLayout: LayingOut? = nil) {
         self.condition = condition
         self.layout = layout
         self.elseLayout = elseLayout
@@ -68,7 +68,7 @@ public extension ConditionalLayout {
 
      - returns: A new ConditionalLayout object with the given conditional closure and layout closure.
      */
-    public init(condition: (UIView) -> Bool, handler: (UIView) -> [NSLayoutConstraint]) {
+    public init(condition: @escaping (UIView) -> Bool, handler: @escaping (UIView) -> [NSLayoutConstraint]) {
         self.init(condition: condition, layout: Layout(handler: handler), elseLayout: nil)
     }
 
@@ -84,7 +84,7 @@ public extension ConditionalLayout {
 
      - returns: A new ConditionalLayout object with the given conditional closure and layout closure.
      */
-    public init(condition: (UIView) -> Bool, handler: (UIView) -> [NSLayoutConstraint], elseHandler: ((UIView) -> [NSLayoutConstraint])) {
+    public init(condition: @escaping (UIView) -> Bool, handler: @escaping (UIView) -> [NSLayoutConstraint], elseHandler: @escaping ((UIView) -> [NSLayoutConstraint])) {
         self.init(condition: condition, layout: Layout(handler: handler), elseLayout: Layout(handler: elseHandler))
     }
 
@@ -98,8 +98,8 @@ public extension ConditionalLayout {
      - returns: A new ConditionalLayout object with the given conditional closure and 
      NSLayoutConstraint objects.
      */
-    public init(condition: (UIView) -> Bool, constraints: [NSLayoutConstraint]) {
-        NSLayoutConstraint.deactivateConstraints(constraints)
+    public init(condition: @escaping (UIView) -> Bool, constraints: [NSLayoutConstraint]) {
+        NSLayoutConstraint.deactivate(constraints)
         self.init(condition: condition, layout: Layout(constraints: constraints), elseLayout: nil)
     }
 
@@ -115,9 +115,9 @@ public extension ConditionalLayout {
      - returns: A new ConditionalLayout object with the given conditional closure and
      NSLayoutConstraint objects for each condition
      */
-    public init(condition: (UIView) -> Bool, constraints: [NSLayoutConstraint], elseConstraints: [NSLayoutConstraint]) {
-        NSLayoutConstraint.deactivateConstraints(constraints)
-        NSLayoutConstraint.deactivateConstraints(elseConstraints)
+    public init(condition: @escaping (UIView) -> Bool, constraints: [NSLayoutConstraint], elseConstraints: [NSLayoutConstraint]) {
+        NSLayoutConstraint.deactivate(constraints)
+        NSLayoutConstraint.deactivate(elseConstraints)
         self.init(condition: condition, layout: Layout(constraints: constraints), elseLayout: Layout(constraints: elseConstraints) )
     }
 }
@@ -132,7 +132,7 @@ public extension LayingOut {
      - returns: A new ConditionalLayout object with the given conditional closure and supplied 
      LayingOut object.
      */
-    public func when(condition: (UIView) -> Bool) -> ConditionalLayout {
+    public func when(_ condition: @escaping (UIView) -> Bool) -> ConditionalLayout {
         return ConditionalLayout(condition: condition, layout: self)
     }
 }

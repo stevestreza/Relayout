@@ -11,7 +11,7 @@ import XCTest
 
 class TestView: UIView {
 	#if os(OSX)
-	override var flipped: Bool {
+	override var isFlipped: Bool {
 		return true
 	}
 	#endif
@@ -30,10 +30,10 @@ class RelayoutTests: XCTestCase {
         let layout = Layout { rootView -> [NSLayoutConstraint] in
             XCTAssertEqual(rootView, view)
             return [
-                subview.widthAnchor.constraintEqualToConstant(40),
-                subview.heightAnchor.constraintEqualToConstant(40),
-                subview.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor, constant: 20),
-                subview.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 20),
+                subview.widthAnchor.constraint(equalToConstant: 40),
+                subview.heightAnchor.constraint(equalToConstant: 40),
+                subview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                subview.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
             ]
         }
         return (view, subview, layout)
@@ -68,14 +68,14 @@ class RelayoutTests: XCTestCase {
         XCTAssertEqual(view.constraints.count, 0)
 
         identifiedLayout.layout()
-        let regex = try! NSRegularExpression(pattern: "Test \\[[0-9]*\\]", options: NSRegularExpressionOptions())
+        let regex = try! NSRegularExpression(pattern: "Test \\[[0-9]*\\]", options: NSRegularExpression.Options())
         view.constraints.forEach { constraint in
             guard let identifier = constraint.identifier else {
                 XCTAssertNotNil(constraint.identifier)
                 return
             }
 
-            XCTAssertTrue(regex.matchesInString(identifier, options: NSMatchingOptions(), range: NSRange(location: 0, length: identifier.characters.count)).count == 1)
+            XCTAssertTrue(regex.matches(in: identifier, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: identifier.characters.count)).count == 1)
         }
     }
 

@@ -41,7 +41,7 @@ public struct TraitCollectionLayout: LayingOut {
      */
     public func constraints(in view: UIView) -> [NSLayoutConstraint] {
         let traitCollection = view.traitCollection
-        if traitCollection.containsTraitsInCollection(matchingTraitCollection) {
+        if traitCollection.containsTraits(in: matchingTraitCollection) {
             return layout.constraints(in: view)
         }
         else {
@@ -144,67 +144,67 @@ extension LayingOut {
      - returns: A new TraitCollectionLayout checking against a given UITraitCollection and returning
      the NSLayoutConstraint objects from the called LayingOut object.
      */
-    func when(horizontalSizeClass horizontalSizeClass: UIUserInterfaceSizeClass, verticalSizeClass: UIUserInterfaceSizeClass) -> TraitCollectionLayout {
+    func when(horizontalSizeClass: UIUserInterfaceSizeClass, verticalSizeClass: UIUserInterfaceSizeClass) -> TraitCollectionLayout {
         return TraitCollectionLayout(horizontalSizeClass: horizontalSizeClass, verticalSizeClass: verticalSizeClass, layout: self)
     }
     
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is a phone and 
     /// returning the NSLayoutConstraint objects from the called LayingOut object if they match.
     var whenPhone: TraitCollectionLayout {
-        return when(userInterfaceIdiom: .Phone)
+        return when(userInterfaceIdiom: .phone)
     }
 
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is a pad and
     /// returning the NSLayoutConstraint objects from the called LayingOut object if they match.
     var whenPad: TraitCollectionLayout {
-        return when(userInterfaceIdiom: .Pad)
+        return when(userInterfaceIdiom: .pad)
     }
 
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is a TV and
     /// returning the NSLayoutConstraint objects from the called LayingOut object if they match.
     @available(iOS 9, *)
     var whenTV: TraitCollectionLayout {
-        return when(userInterfaceIdiom: .TV)
+        return when(userInterfaceIdiom: .tv)
     }
 
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is in CarPlay mode 
     /// and returning the NSLayoutConstraint objects from the called LayingOut object if they match.
     @available(iOS 9, *)
     var whenCarPlay: TraitCollectionLayout {
-        return when(userInterfaceIdiom: .CarPlay)
+        return when(userInterfaceIdiom: .carPlay)
     }
 
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is horizontally 
     /// compact and returning the NSLayoutConstraint objects from the called LayingOut object if 
     /// they match.
     var whenHorizontallyCompact: TraitCollectionLayout {
-        return when(horizontalSizeClass: .Compact)
+        return when(horizontalSizeClass: .compact)
     }
 
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is horizontally
     /// regular and returning the NSLayoutConstraint objects from the called LayingOut object if
     /// they match.
     var whenHorizontallyRegular: TraitCollectionLayout {
-        return when(horizontalSizeClass: .Regular)
+        return when(horizontalSizeClass: .regular)
     }
 
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is vertically
     /// compact and returning the NSLayoutConstraint objects from the called LayingOut object if
     /// they match.
     var whenVerticallyCompact: TraitCollectionLayout {
-        return when(verticalSizeClass: .Compact)
+        return when(verticalSizeClass: .compact)
     }
 
     /// Creates a new TraitCollectionLayout checking if the user interface idiom is vertically
     /// regular and returning the NSLayoutConstraint objects from the called LayingOut object if
     /// they match.
     var whenVerticallyRegular: TraitCollectionLayout {
-        return when(verticalSizeClass: .Regular)
+        return when(verticalSizeClass: .regular)
     }
 }
 
-private extension UITraitCollection {
-    private convenience init(
+fileprivate extension UITraitCollection {
+    fileprivate convenience init(
         userInterfaceIdiom idiom: UIUserInterfaceIdiom? = nil,
         displayScale scale: CGFloat? = nil,
         horizontalSizeClass: UIUserInterfaceSizeClass? = nil,
@@ -228,7 +228,7 @@ private extension UITraitCollection {
             collections.append(UITraitCollection(verticalSizeClass: verticalSizeClass))
         }
         
-        self.init(traitsFromCollections: collections)
+        self.init(traitsFrom: collections)
     }
 }
 
