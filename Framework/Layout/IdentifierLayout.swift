@@ -1,5 +1,9 @@
 import Foundation
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 /**
  *    Adds a given String identifier to the NSLayoutConstraint objects returned by a given LayingOut

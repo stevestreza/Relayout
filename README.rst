@@ -44,21 +44,21 @@ Finally, Relayout is not a great tool to use in conjunction with Interface Build
 Installing
 ==========
 
-You can install Relayout with Carthage, CocoaPods, or manually.
+Relayout supports iOS 8.0+, tvOS 9.0+, and OS X 10.10+. You can install Relayout with Carthage, CocoaPods, or manually.
 
 With CocoaPods
 --------------
 
 Add the following to your `Podfile`:code:. ::
 
-   pod 'Relayout', '~> 1.0'
+   pod 'Relayout', '~> 1.1'
 
 With Carthage
 -------------
 
 Add the following to your `Cartfile`:code:. ::
 
-   github "stevestreza/Relayout" ~> 1.0
+   github "stevestreza/Relayout" ~> 1.1
 
 Manually
 --------

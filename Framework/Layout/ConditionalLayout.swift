@@ -1,5 +1,10 @@
 import Foundation
+
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Return the NSLayoutConstraint objects from one LayingOut object if a given condition is true, or 
 /// the NSLayoutConstraint objects from a second LayingOut object if false.

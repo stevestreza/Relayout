@@ -6,7 +6,7 @@
 //  Copyright © 2016 Steve Streza. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Relayout.
 FOUNDATION_EXPORT double RelayoutVersionNumber;

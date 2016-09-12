@@ -1,0 +1,4 @@
+// customize supported platforms to exclude watchOS.
+// this file should be included in other xcconfigs _after_
+// including the appropriate UniversalFramework_*.xcconfig.
+SUPPORTED_PLATFORMS = macosx iphonesimulator iphoneos appletvos appletvsimulator
